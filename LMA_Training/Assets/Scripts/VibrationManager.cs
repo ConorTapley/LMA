@@ -15,9 +15,9 @@ public class VibrationManager : MonoBehaviour
             singleton = this;
     }
 
-    public void TriggerVibration(int vibrationDuration, OVRInput.Controller controller)
+    public void TriggerVibration(AudioClip vibrationAudio, OVRInput.Controller controller)
     {
-        OVRHapticsClip clip = new OVRHapticsClip(vibrationDuration);
+        OVRHapticsClip clip = new OVRHapticsClip(vibrationAudio);
 
         //Trigger vibration on left controller
         if(controller == OVRInput.Controller.LTouch)

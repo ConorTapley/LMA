@@ -25,7 +25,8 @@ public class IncertLMA : MonoBehaviour
         {
             Debug.Log("IN MOUTH");
             GetComponent<AudioSource>().PlayOneShot(dingSound);
-            //VibrationManager.singleton.TriggerVibration(2, OVRInput.Controller.RTouch);
+            VibrationManager.singleton.TriggerVibration(dingSound, OVRInput.Controller.LTouch);
+            VibrationManager.singleton.TriggerVibration(dingSound, OVRInput.Controller.RTouch);
             
         }
     }
