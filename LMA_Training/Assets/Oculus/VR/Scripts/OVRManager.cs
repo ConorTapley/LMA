@@ -1157,7 +1157,7 @@ public class OVRManager : MonoBehaviour
 		instance = this;
 
 		// uncomment the following line to disable the callstack printed to log
-		//Application.SetStackTraceLogType(LogType.Log, StackTraceLogType.None);  // TEMPORARY
+		Application.SetStackTraceLogType(LogType.Log, StackTraceLogType.None);  // TEMPORARY
 
 		Debug.Log("Unity v" + Application.unityVersion + ", " +
 				"Oculus Utilities v" + OVRPlugin.wrapperVersion + ", " +
@@ -1803,7 +1803,7 @@ public class OVRManager : MonoBehaviour
 
 	private void OnDestroy()
 	{
-		Debug.Log("[OVRManager] OnDestroy");
+		//Debug.Log("[OVRManager] OnDestroy");
 		OVRManagerinitialized = false;
 	}
 
@@ -1811,11 +1811,11 @@ public class OVRManager : MonoBehaviour
 	{
 		if (pause)
 		{
-			Debug.Log("[OVRManager] OnApplicationPause(true)");
+			//Debug.Log("[OVRManager] OnApplicationPause(true)");
 		}
 		else
 		{
-			Debug.Log("[OVRManager] OnApplicationPause(false)");
+			//Debug.Log("[OVRManager] OnApplicationPause(false)");
 		}
 	}
 
@@ -1823,17 +1823,17 @@ public class OVRManager : MonoBehaviour
 	{
 		if (focus)
 		{
-			Debug.Log("[OVRManager] OnApplicationFocus(true)");
+			//Debug.Log("[OVRManager] OnApplicationFocus(true)");
 		}
 		else
 		{
-			Debug.Log("[OVRManager] OnApplicationFocus(false)");
+			//Debug.Log("[OVRManager] OnApplicationFocus(false)");
 		}
 	}
 
 	private void OnApplicationQuit()
 	{
-		Debug.Log("[OVRManager] OnApplicationQuit");
+		//Debug.Log("[OVRManager] OnApplicationQuit");
 	}
 
 #endregion // Unity Messages
