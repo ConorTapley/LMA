@@ -23,7 +23,7 @@ public class IncertLMA : MonoBehaviour
         if(other.CompareTag("Mouth"))
         {
             Debug.Log("IN MOUTH");
-            VibrationManager.singleton.TriggerVibration(2, OVRInput.Controller.All);
+            //VibrationManager.singleton.TriggerVibration(2, OVRInput.Controller.All);
         }
     }
 }
