@@ -7,12 +7,10 @@ using UnityEngine.EventSystems;
 public class ClipBoardScript : MonoBehaviour
 {
     public Text weightRng;
-    public Text scoreTxt;
 
     private int weightNum;
 
     public GameObject testPg1;
-    public GameObject testPg2;
     public GameObject finishPg;
 
     private GameObject detailsPg;
@@ -21,7 +19,7 @@ public class ClipBoardScript : MonoBehaviour
     private GameObject button;
     private GameObject [] buttonSet;
 
-    private int testScore;
+    public int testScore;
 
     void Start()
     {
@@ -37,35 +35,18 @@ public class ClipBoardScript : MonoBehaviour
     
     void Update()
     {
-        scoreTxt.text = testScore.ToString();
+        
     }
 
     public void OnClick()
     {
         var tstPg1 = Instantiate(testPg1);
         tstPg1.transform.position = detailsPg.transform.position;
-        tstPg1.transform.parent = clipBoard.transform.parent;
+        tstPg1.transform.SetParent(clipBoard.transform);
 
         GameObject.Destroy(detailsPg);
     }
 
-    public void OnClick_2()
-    {
-        var tstPg2 = Instantiate(testPg2);
-        tstPg2.transform.position = testPg1.transform.position;
-        tstPg2.transform.parent = clipBoard.transform.parent;
-
-        GameObject.Destroy(testPg1);
-    }
-
-    public void OnClick_3()
-    {
-        var finPg = Instantiate(finishPg);
-        finishPg.transform.position = testPg2.transform.position;
-        finishPg.transform.parent = clipBoard.transform.parent;
-
-        GameObject.Destroy(testPg2);
-    }
 
     public void OnCorrectClick()
     {
