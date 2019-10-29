@@ -28,7 +28,7 @@ public class ClipBoardScript : MonoBehaviour
         testScore = 0;
 
         detailsPg = GameObject.FindGameObjectWithTag("DetailsPage");
-        clipBoard = GameObject.FindGameObjectWithTag("ClipBoard");
+        //clipBoard = GameObject.FindGameObjectWithTag("ClipBoard"); //<-----console error saying "Clipboard" tag is not defined
         
     }
 
