@@ -7,6 +7,7 @@ public class IncertLMA : MonoBehaviour
     private OVRGrabbable ovrGrabbable;
     public OVRInput.Button grabButton;
     public AudioClip dingSound;
+    public bool inMouth = false;
 
     void Start()
     {
@@ -19,7 +20,7 @@ public class IncertLMA : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Mouth"))
         {
@@ -27,12 +28,13 @@ public class IncertLMA : MonoBehaviour
             GetComponent<AudioSource>().PlayOneShot(dingSound);
             VibrationManager.singleton.TriggerVibration(dingSound, OVRInput.Controller.LTouch);
             VibrationManager.singleton.TriggerVibration(dingSound, OVRInput.Controller.RTouch);
-            
+            inMouth = true;
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    void OnTriggerExit(Collider other)
     {
         OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.Active);
+        inMouth = false;
     }
 }

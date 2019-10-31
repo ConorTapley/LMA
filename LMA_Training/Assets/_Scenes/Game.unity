@@ -138,6 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inMouth: 0
   m_allowOffhandGrab: 1
   m_snapPosition: 0
   m_snapOrientation: 0
@@ -6346,6 +6347,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 9169b69521f57a846a0c1068527e9686,
+        type: 3}
+      propertyPath: m_TagString
+      value: LMA
+      objectReference: {fileID: 0}
     - target: {fileID: 2187449669427467095, guid: 9169b69521f57a846a0c1068527e9686,
         type: 3}
       propertyPath: m_Layer
@@ -8728,6 +8734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inMouth: 0
   m_allowOffhandGrab: 1
   m_snapPosition: 0
   m_snapOrientation: 0
@@ -8748,6 +8755,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grabButton: 0
   dingSound: {fileID: 8300000, guid: 3ec1f95e2d9517c46ba54768e3f52406, type: 3}
+  inMouth: 0
 --- !u!82 &1266773281
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8760,13 +8768,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3ec1f95e2d9517c46ba54768e3f52406, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.248
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 226
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500

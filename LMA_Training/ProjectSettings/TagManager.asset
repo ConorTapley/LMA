@@ -15,6 +15,7 @@ TagManager:
   - Score
   - DetailsPage
   - ClipBoardManager
+  - LMA
   layers:
   - Default
   - TransparentFX

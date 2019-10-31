@@ -23,6 +23,9 @@ using UnityEngine;
 public class OVRGrabbable : MonoBehaviour
 {
     [SerializeField]
+    public bool inMouth = false; //-----------------------------------------------------------------------------------
+
+    [SerializeField]
     protected bool m_allowOffhandGrab = true;
     [SerializeField]
     protected bool m_snapPosition = false;
@@ -161,4 +164,19 @@ public class OVRGrabbable : MonoBehaviour
             m_grabbedBy.ForceRelease(this);
         }
     }
+
+
+    void OnTriggerEnter(Collider other) //------------------------------------------------------------------------
+    {
+        if (other.CompareTag("Mouth"))
+        {
+            Debug.Log("IN MOUTH");
+            inMouth = true;
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        inMouth = false;
+    } //-----------------------------------------------------------------------------------------------------------
 }
