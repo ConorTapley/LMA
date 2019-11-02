@@ -9717,6 +9717,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestMan(noTexture)
       objectReference: {fileID: 0}
+    - target: {fileID: 129350255495253916, guid: 9752d06dff88fd04281fe7ebb78e84a2,
+        type: 3}
+      propertyPath: m_Name
+      value: Armature(Moveable)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117602864276563985, guid: 9752d06dff88fd04281fe7ebb78e84a2,
+        type: 3}
+      propertyPath: m_Name
+      value: Man (Dont Move)
+      objectReference: {fileID: 0}
     - target: {fileID: -8358197915308640123, guid: 9752d06dff88fd04281fe7ebb78e84a2,
         type: 3}
       propertyPath: m_Name
@@ -9832,11 +9842,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 5472dcbe82a64c4469dfbca8dcef42f3, type: 2}
-    - target: {fileID: 129350255495253916, guid: 9752d06dff88fd04281fe7ebb78e84a2,
-        type: 3}
-      propertyPath: m_Name
-      value: Armature(Moveable)
-      objectReference: {fileID: 0}
     - target: {fileID: 1370728030146469409, guid: 9752d06dff88fd04281fe7ebb78e84a2,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -9926,11 +9931,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.0005
-      objectReference: {fileID: 0}
-    - target: {fileID: 8117602864276563985, guid: 9752d06dff88fd04281fe7ebb78e84a2,
-        type: 3}
-      propertyPath: m_Name
-      value: Man (Dont Move)
       objectReference: {fileID: 0}
     - target: {fileID: 9111962883125049612, guid: 9752d06dff88fd04281fe7ebb78e84a2,
         type: 3}
@@ -12820,7 +12820,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d293690b49554654a8f7eb076f5cd541, type: 2}
+      objectReference: {fileID: 2100000, guid: 5fe9e9b8f5d9c2542a19609e3110014e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2ead5e5525418043b8fcd203ae47940, type: 3}
 --- !u!114 &1859430011 stripped
