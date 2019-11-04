@@ -2229,7 +2229,7 @@ PrefabInstance:
     - target: {fileID: 8668424481281686881, guid: 70fa7b16c55ccfb47a1251dcf57a2ca7,
         type: 3}
       propertyPath: m_Name
-      value: TestMan(noTexture)
+      value: Patient
       objectReference: {fileID: 0}
     - target: {fileID: 5627027813259202418, guid: 70fa7b16c55ccfb47a1251dcf57a2ca7,
         type: 3}
@@ -2286,8 +2286,39 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -180
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 2350092005085438472, guid: 70fa7b16c55ccfb47a1251dcf57a2ca7,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2c0a223cb4669a74e81e95aa9f6b2b23, type: 2}
+    m_RemovedComponents:
+    - {fileID: 2350092005085438472, guid: 70fa7b16c55ccfb47a1251dcf57a2ca7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 70fa7b16c55ccfb47a1251dcf57a2ca7, type: 3}
+--- !u!1 &253470699 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 767310038433917940, guid: 70fa7b16c55ccfb47a1251dcf57a2ca7,
+    type: 3}
+  m_PrefabInstance: {fileID: 253470698}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &253470700
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253470699}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 9752d06dff88fd04281fe7ebb78e84a2, type: 3}
+  m_Controller: {fileID: 9100000, guid: 2c0a223cb4669a74e81e95aa9f6b2b23, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &281130564
 GameObject:
   m_ObjectHideFlags: 0
