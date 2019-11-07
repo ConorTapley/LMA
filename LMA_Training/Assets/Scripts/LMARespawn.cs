@@ -22,7 +22,7 @@ public class LMARespawn : MonoBehaviour
         if(onGround)
         {
             LMA.transform.position = LMASpawnPos;
-            LMA.transform.eulerAngles = LMASpawnRot;
+            LMA.transform.eulerAngles = new Vector3(0, 181, 0);
         }
     }
 
