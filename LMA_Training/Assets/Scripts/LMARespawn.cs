@@ -4,17 +4,14 @@ using UnityEngine;
 
 public class LMARespawn : MonoBehaviour
 {
-    [SerializeField] private GameObject LMA;
-    [SerializeField] private Transform LMAStartTrans;
-    [SerializeField] private Vector3 LMASpawnPos;
-    [SerializeField] private Vector3 LMASpawnRot;
-    [SerializeField] private bool onGround = false;
-   // [SerializeField]
+    private GameObject LMA;
+    private Vector3 LMASpawnPos;
+    private Vector3 LMASpawnRot;
+    private bool onGround = false;
 
     void Start()
     {
         LMA = this.gameObject;
-        LMAStartTrans = LMA.transform;
         LMASpawnPos = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
         LMASpawnRot = new Vector3(this.transform.rotation.x, this.transform.rotation.y, this.transform.rotation.z);
     }
@@ -25,7 +22,7 @@ public class LMARespawn : MonoBehaviour
         if(onGround)
         {
             LMA.transform.position = LMASpawnPos;
-            LMA.transform.rotation = LMAStartTrans.rotation;
+            LMA.transform.eulerAngles = LMASpawnRot;
         }
     }
 
