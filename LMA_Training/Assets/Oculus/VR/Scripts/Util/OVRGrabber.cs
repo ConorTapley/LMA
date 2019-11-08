@@ -23,6 +23,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class OVRGrabber : MonoBehaviour 
 {
+    [SerializeField] private Rigidbody LMARigidBody;
+
     // Grip trigger thresholds for picking up objects, with some hysteresis.
     public float grabBegin = 0.55f;
     public float grabEnd = 0.35f;
@@ -85,6 +87,8 @@ public class OVRGrabber : MonoBehaviour
 
     protected virtual void Awake()
     {
+
+
         m_anchorOffsetPosition = transform.localPosition;
         m_anchorOffsetRotation = transform.localRotation;
 
@@ -203,10 +207,15 @@ public class OVRGrabber : MonoBehaviour
         }
         else if ((m_prevFlex <= grabEnd) && (prevFlex > grabEnd))
         {
+            LMARigidBody = m_grabbedObj.GetComponent<Rigidbody>();
             if (m_grabbedObj.tag == "LMA" && !m_grabbedObj.inMouth) //-------------------------------------------------------------------------------------------------------------------------
             {
-                return;
+                //return;
+                LMARigidBody.isKinematic = true;
+                LMARigidBody.useGravity = false;
             }
+            LMARigidBody.isKinematic = false;
+            LMARigidBody.useGravity = true;
             GrabEnd();
         }
     }
