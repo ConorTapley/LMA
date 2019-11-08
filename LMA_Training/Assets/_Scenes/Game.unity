@@ -1198,11 +1198,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2075391117}
     m_Modifications:
-    - target: {fileID: 7731380996777812673, guid: 8d2b90530d53a4346a46c10ff3282ad7,
-        type: 3}
-      propertyPath: m_Name
-      value: Bed
-      objectReference: {fileID: 0}
     - target: {fileID: 6705925632237457618, guid: 8d2b90530d53a4346a46c10ff3282ad7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1257,6 +1252,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731380996777812673, guid: 8d2b90530d53a4346a46c10ff3282ad7,
+        type: 3}
+      propertyPath: m_Name
+      value: Bed
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d2b90530d53a4346a46c10ff3282ad7, type: 3}
@@ -3017,6 +3017,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &631856067 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 767310038433917940, guid: 70fa7b16c55ccfb47a1251dcf57a2ca7,
+    type: 3}
+  m_PrefabInstance: {fileID: 253470698}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &631856069
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631856067}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: af1eb8699935bd947bff05195bbde5f4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &682105708
 GameObject:
   m_ObjectHideFlags: 0
