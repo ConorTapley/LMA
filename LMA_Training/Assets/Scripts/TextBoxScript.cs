@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TextBoxScript : MonoBehaviour
 {
-    public Text popUpText;
+    
 
     private GameObject tSpawn;
 
@@ -21,7 +21,7 @@ public class TextBoxScript : MonoBehaviour
 
     }
 
-    public void TextBox()
+    public void TextBox(GameObject popUpText)
     {
         Instantiate(popUpText, new Vector3(transform.position.x,transform.position.y,transform.position.z),Quaternion.identity );
         popUpText.transform.parent = tSpawn.transform; 

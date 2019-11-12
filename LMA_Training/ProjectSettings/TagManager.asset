@@ -17,6 +17,8 @@ TagManager:
   - ClipBoardManager
   - LMA
   - TextBoxSpawn
+  - ChinButtonSpawn
+  - TextBoxStep2
   layers:
   - Default
   - TransparentFX
