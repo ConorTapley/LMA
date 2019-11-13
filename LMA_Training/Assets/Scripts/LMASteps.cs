@@ -54,20 +54,6 @@ public class LMASteps : MonoBehaviour
 
     private void ChangeCurrentBottomButton()
     {
-        /*
-        //bottom1 = currentBottomButton
-        if (bottomButton1.GetComponent<Image>().sprite = Blank) //<----------if the bottomButton 1 is blank
-        {
-            bottom1 = true;
-            bottom2 = false;
-            bottom3 = false;
-            bottom4 = false;
-            bottom5 = false;
-            bottom6 = false;
-            bottom7 = false;
-        }
-        */
-
         //bottom2 = currentBottomButton
         if (bottomButton1.GetComponent<Image>().sprite != Blank) //<----------if the bottomButton 1 is not blank
         {
@@ -178,5 +164,172 @@ public class LMASteps : MonoBehaviour
 
         if (bottom7)
             bottomButton7.GetComponent<Image>().sprite = step1.GetComponent<Image>().sprite;
+    }
+
+    public void OnClick2()
+    {
+        if (bottom1)
+            bottomButton1.GetComponent<Image>().sprite = step2.GetComponent<Image>().sprite;
+
+        if (bottom2)
+            bottomButton2.GetComponent<Image>().sprite = step2.GetComponent<Image>().sprite;
+
+        if (bottom3)
+            bottomButton3.GetComponent<Image>().sprite = step2.GetComponent<Image>().sprite;
+
+        if (bottom4)
+            bottomButton4.GetComponent<Image>().sprite = step2.GetComponent<Image>().sprite;
+
+        if (bottom5)
+            bottomButton5.GetComponent<Image>().sprite = step2.GetComponent<Image>().sprite;
+
+        if (bottom6)
+            bottomButton6.GetComponent<Image>().sprite = step2.GetComponent<Image>().sprite;
+
+        if (bottom7)
+            bottomButton7.GetComponent<Image>().sprite = step2.GetComponent<Image>().sprite;
+    }
+
+    public void OnClick3()
+    {
+        if (bottom1)
+            bottomButton1.GetComponent<Image>().sprite = step3.GetComponent<Image>().sprite;
+
+        if (bottom2)
+            bottomButton2.GetComponent<Image>().sprite = step3.GetComponent<Image>().sprite;
+
+        if (bottom3)
+            bottomButton3.GetComponent<Image>().sprite = step3.GetComponent<Image>().sprite;
+
+        if (bottom4)
+            bottomButton4.GetComponent<Image>().sprite = step3.GetComponent<Image>().sprite;
+
+        if (bottom5)
+            bottomButton5.GetComponent<Image>().sprite = step3.GetComponent<Image>().sprite;
+
+        if (bottom6)
+            bottomButton6.GetComponent<Image>().sprite = step3.GetComponent<Image>().sprite;
+
+        if (bottom7)
+            bottomButton7.GetComponent<Image>().sprite = step3.GetComponent<Image>().sprite;
+    }
+
+    public void OnClick4()
+    {
+        if (bottom1)
+            bottomButton1.GetComponent<Image>().sprite = step4.GetComponent<Image>().sprite;
+
+        if (bottom2)
+            bottomButton2.GetComponent<Image>().sprite = step4.GetComponent<Image>().sprite;
+
+        if (bottom3)
+            bottomButton3.GetComponent<Image>().sprite = step4.GetComponent<Image>().sprite;
+
+        if (bottom4)
+            bottomButton4.GetComponent<Image>().sprite = step4.GetComponent<Image>().sprite;
+
+        if (bottom5)
+            bottomButton5.GetComponent<Image>().sprite = step4.GetComponent<Image>().sprite;
+
+        if (bottom6)
+            bottomButton6.GetComponent<Image>().sprite = step4.GetComponent<Image>().sprite;
+
+        if (bottom7)
+            bottomButton7.GetComponent<Image>().sprite = step4.GetComponent<Image>().sprite;
+    }
+
+    public void OnClick5()
+    {
+        if (bottom1)
+            bottomButton1.GetComponent<Image>().sprite = step5.GetComponent<Image>().sprite;
+
+        if (bottom2)
+            bottomButton2.GetComponent<Image>().sprite = step5.GetComponent<Image>().sprite;
+
+        if (bottom3)
+            bottomButton3.GetComponent<Image>().sprite = step5.GetComponent<Image>().sprite;
+
+        if (bottom4)
+            bottomButton4.GetComponent<Image>().sprite = step5.GetComponent<Image>().sprite;
+
+        if (bottom5)
+            bottomButton5.GetComponent<Image>().sprite = step5.GetComponent<Image>().sprite;
+
+        if (bottom6)
+            bottomButton6.GetComponent<Image>().sprite = step5.GetComponent<Image>().sprite;
+
+        if (bottom7)
+            bottomButton7.GetComponent<Image>().sprite = step5.GetComponent<Image>().sprite;
+    }
+
+    public void OnClick6()
+    {
+        if (bottom1)
+            bottomButton1.GetComponent<Image>().sprite = step6.GetComponent<Image>().sprite;
+
+        if (bottom2)
+            bottomButton2.GetComponent<Image>().sprite = step6.GetComponent<Image>().sprite;
+
+        if (bottom3)
+            bottomButton3.GetComponent<Image>().sprite = step6.GetComponent<Image>().sprite;
+
+        if (bottom4)
+            bottomButton4.GetComponent<Image>().sprite = step6.GetComponent<Image>().sprite;
+
+        if (bottom5)
+            bottomButton5.GetComponent<Image>().sprite = step6.GetComponent<Image>().sprite;
+
+        if (bottom6)
+            bottomButton6.GetComponent<Image>().sprite = step6.GetComponent<Image>().sprite;
+
+        if (bottom7)
+            bottomButton7.GetComponent<Image>().sprite = step6.GetComponent<Image>().sprite;
+    }
+
+    public void OnClick7()
+    {
+        if (bottom1)
+            bottomButton1.GetComponent<Image>().sprite = step7.GetComponent<Image>().sprite;
+
+        if (bottom2)
+            bottomButton2.GetComponent<Image>().sprite = step7.GetComponent<Image>().sprite;
+
+        if (bottom3)
+            bottomButton3.GetComponent<Image>().sprite = step7.GetComponent<Image>().sprite;
+
+        if (bottom4)
+            bottomButton4.GetComponent<Image>().sprite = step7.GetComponent<Image>().sprite;
+
+        if (bottom5)
+            bottomButton5.GetComponent<Image>().sprite = step7.GetComponent<Image>().sprite;
+
+        if (bottom6)
+            bottomButton6.GetComponent<Image>().sprite = step7.GetComponent<Image>().sprite;
+
+        if (bottom7)
+            bottomButton7.GetComponent<Image>().sprite = step7.GetComponent<Image>().sprite;
+    }
+
+    public void OnBottomClick1()
+    {
+        bottomButton1.GetComponent<Image>().sprite = Blank;
+        bottom1 = true;
+        bottom2 = false;
+        bottom3 = false;
+        bottom4 = false;
+        bottom5 = false;
+        bottom6 = false;
+        bottom7 = false;
+    }
+    public void OnBottomClick2()
+    {
+        bottomButton2.GetComponent<Image>().sprite = Blank;
+        bottom1 = false;
+        bottom2 = true;
+        bottom3 = false;
+        bottom4 = false;
+        bottom5 = false;
+        bottom6 = false;
+        bottom7 = false;
     }
 }
