@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Walls and Floor
+  m_Name: Beam
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _NORMALMAP
+  m_ShaderKeywords: _METALLICGLOSSMAP _NORMALMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: e45f0c24de96ec7468f8e03eb738b5af, type: 3}
+        m_Texture: {fileID: 2800000, guid: e885e256434a9914e8fef6c3e172633c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -40,11 +40,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: c404a6e9791ef7543b68ae0c858e1c9c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 521ec169a7060c240962bc07fa563465, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 74cd28974dee73242947eefab62d763e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -60,8 +60,8 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _GlossMapScale: 1
-    - _Glossiness: 0.15
+    - _GlossMapScale: 0.311
+    - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
