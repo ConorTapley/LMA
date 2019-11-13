@@ -7,7 +7,8 @@ public class LMASteps : MonoBehaviour
 {
     public Button step1, step2, step3, step4, step5, step6, step7;
     public Button bottomButton1, bottomButton2, bottomButton3, bottomButton4, bottomButton5, bottomButton6, bottomButton7;
-    [SerializeField] private bool bottom1 = true, bottom2 = false, bottom3 = false, bottom4 = false, bottom5 = false, bottom6 = false, bottom7 = false;
+    private bool bottom1 = true, bottom2 = false, bottom3 = false, bottom4 = false, bottom5 = false, bottom6 = false, bottom7 = false;
+    private bool correct1 = false, correct2 = false, correct3 = false, correct4 = false, correct5 = false, correct6 = false, correct7 = false;
     public Button currentBottomButton;
     public Sprite Blank;
 
@@ -24,32 +25,51 @@ public class LMASteps : MonoBehaviour
 
     void Update()
     {
-        //CurrentBottomButton();
         ChangeCurrentBottomButton();
+        Win();
     }
 
-    private void CurrentBottomButton()
+    private void Win()
     {
-        if (bottom1)
-            currentBottomButton = bottomButton1;
+        if(correct1 && correct2 && correct3 && correct4 && correct5 && correct6 && correct7)
+        {
+            //Debug.Log("You Win!!");
+        }
 
-        if (bottom2)
-            currentBottomButton = bottomButton2;
+        if(bottomButton1.GetComponent<Image>().sprite == step1.GetComponent<Image>().sprite)
+            correct1 = true;
+        else
+            correct1 = false;
 
-        if (bottom3)
-            currentBottomButton = bottomButton3;
+        if (bottomButton2.GetComponent<Image>().sprite == step2.GetComponent<Image>().sprite)
+            correct2 = true;
+        else
+            correct2 = false;
 
-        if (bottom4)
-            currentBottomButton = bottomButton4;
+        if (bottomButton3.GetComponent<Image>().sprite == step3.GetComponent<Image>().sprite)
+            correct3 = true;
+        else
+            correct3 = false;
 
-        if (bottom5)
-            currentBottomButton = bottomButton5;
+        if (bottomButton4.GetComponent<Image>().sprite == step4.GetComponent<Image>().sprite)
+            correct4 = true;
+        else
+            correct4 = false;
 
-        if (bottom6)
-            currentBottomButton = bottomButton6;
+        if (bottomButton5.GetComponent<Image>().sprite == step5.GetComponent<Image>().sprite)
+            correct5 = true;
+        else
+            correct5 = false;
 
-        if (bottom7)
-            currentBottomButton = bottomButton7;
+        if (bottomButton6.GetComponent<Image>().sprite == step6.GetComponent<Image>().sprite)
+            correct6 = true;
+        else
+            correct6 = false;
+
+        if (bottomButton7.GetComponent<Image>().sprite == step7.GetComponent<Image>().sprite)
+            correct7 = true;
+        else
+            correct7 = false;
     }
 
     private void ChangeCurrentBottomButton()
@@ -144,7 +164,7 @@ public class LMASteps : MonoBehaviour
 
     public void OnClick1()
     {
-        if(bottom1)
+        if (bottom1)
             bottomButton1.GetComponent<Image>().sprite = step1.GetComponent<Image>().sprite;
 
         if (bottom2)
