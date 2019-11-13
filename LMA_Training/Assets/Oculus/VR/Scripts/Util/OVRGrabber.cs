@@ -58,7 +58,10 @@ public class OVRGrabber : MonoBehaviour
     protected Quaternion m_anchorOffsetRotation;
     protected Vector3 m_anchorOffsetPosition;
     protected float m_prevFlex;
+
 	protected OVRGrabbable m_grabbedObj = null;
+    //[SerializeField] GameObject LMA;//   <------------------------------------------------------------------------------------------------------------------------------
+
     protected Vector3 m_grabbedObjectPosOff;
     protected Quaternion m_grabbedObjectRotOff;
 	protected Dictionary<OVRGrabbable, int> m_grabCandidates = new Dictionary<OVRGrabbable, int>();
@@ -87,8 +90,6 @@ public class OVRGrabber : MonoBehaviour
 
     protected virtual void Awake()
     {
-
-
         m_anchorOffsetPosition = transform.localPosition;
         m_anchorOffsetRotation = transform.localRotation;
 
@@ -207,15 +208,21 @@ public class OVRGrabber : MonoBehaviour
         }
         else if ((m_prevFlex <= grabEnd) && (prevFlex > grabEnd))
         {
+            /*
             LMARigidBody = m_grabbedObj.GetComponent<Rigidbody>();
-            if (m_grabbedObj.tag == "LMA" && !m_grabbedObj.inMouth) //-------------------------------------------------------------------------------------------------------------------------
+            
+            if (m_grabbedObj.tag == "LMA" && m_grabbedObj.inMouth) //-------------------------------------------------------------------------------------------------------------------------
             {
                 //return;
                 LMARigidBody.isKinematic = true;
                 LMARigidBody.useGravity = false;
             }
-            LMARigidBody.isKinematic = false;
-            LMARigidBody.useGravity = true;
+            else
+            {
+                LMARigidBody.isKinematic = false;
+                LMARigidBody.useGravity = true;
+            }
+            */
             GrabEnd();
         }
     }
@@ -336,7 +343,15 @@ public class OVRGrabber : MonoBehaviour
     {
         if (m_grabbedObj != null)
         {
-			OVRPose localPose = new OVRPose { position = OVRInput.GetLocalControllerPosition(m_controller), orientation = OVRInput.GetLocalControllerRotation(m_controller) };
+            /*
+            if (m_grabbedObj.tag == "LMA" && m_grabbedObj.inMouth) //-------------------------------------------------------------------------------------------------------------------------
+            {
+                //return;
+                LMARigidBody.isKinematic = true;
+                LMARigidBody.useGravity = false;
+            }
+            */
+            OVRPose localPose = new OVRPose { position = OVRInput.GetLocalControllerPosition(m_controller), orientation = OVRInput.GetLocalControllerRotation(m_controller) };
             OVRPose offsetPose = new OVRPose { position = m_anchorOffsetPosition, orientation = m_anchorOffsetRotation };
             localPose = localPose * offsetPose;
 
@@ -385,4 +400,14 @@ public class OVRGrabber : MonoBehaviour
             GrabbableRelease(Vector3.zero, Vector3.zero);
         }
     }
+
+    /*
+    private void Lma() //   <------------------------------------------------------------------------------------------------------------------------------
+    {
+        if(m_grabbedObj.tag == "LMA")
+        {
+            LMA = m_grabbedObj.gameObject;
+        }
+    }
+    */
 }
