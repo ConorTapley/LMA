@@ -3193,7 +3193,7 @@ GameObject:
   - component: {fileID: 126807681}
   - component: {fileID: 126807680}
   m_Layer: 5
-  m_Name: BottomButton4
+  m_Name: Button (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3261,18 +3261,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 126807681}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 803293310}
-        m_MethodName: OnBottomClick4
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &126807681
@@ -3295,7 +3284,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: ae5bd5f5095512d449b3dacb6e05847e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f79a84b9072850943aef0152d1d6bac7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3694,7 +3683,7 @@ GameObject:
   - component: {fileID: 220748986}
   - component: {fileID: 220748985}
   m_Layer: 5
-  m_Name: BottomButton2
+  m_Name: Button (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3762,18 +3751,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 220748986}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 803293310}
-        m_MethodName: OnBottomClick2
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &220748986
@@ -3796,7 +3774,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: ae5bd5f5095512d449b3dacb6e05847e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f79a84b9072850943aef0152d1d6bac7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4592,7 +4570,7 @@ GameObject:
   - component: {fileID: 319600756}
   - component: {fileID: 319600755}
   m_Layer: 5
-  m_Name: Step 1
+  m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4606,7 +4584,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 319600753}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.000005836771}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0000059405}
   m_LocalScale: {x: 0.14138657, y: 1.1789361, z: 0.3701875}
   m_Children:
   - {fileID: 825639112}
@@ -4617,7 +4595,7 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &319600755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4660,18 +4638,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 319600756}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 803293310}
-        m_MethodName: OnClick1
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &319600756
@@ -4694,7 +4661,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 17d7d7325584344489ee11f9f178d579, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f79a84b9072850943aef0152d1d6bac7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4973,7 +4940,7 @@ GameObject:
   - component: {fileID: 376266289}
   - component: {fileID: 376266288}
   m_Layer: 5
-  m_Name: Step 6
+  m_Name: Button (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4987,7 +4954,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 376266286}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.000017510312}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0000059405}
   m_LocalScale: {x: 0.14138657, y: 1.1789361, z: 0.3701875}
   m_Children:
   - {fileID: 1426643272}
@@ -4998,7 +4965,7 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &376266288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5041,18 +5008,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 376266289}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 803293310}
-        m_MethodName: OnClick6
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &376266289
@@ -5075,7 +5031,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 9fb53b1f3ea5614478d5766a53be9359, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f79a84b9072850943aef0152d1d6bac7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5966,7 +5922,7 @@ GameObject:
   - component: {fileID: 547797045}
   - component: {fileID: 547797044}
   m_Layer: 5
-  m_Name: Step 7
+  m_Name: Button (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5980,7 +5936,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 547797042}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.000017510312}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0000059405}
   m_LocalScale: {x: 0.14138657, y: 1.1789361, z: 0.3701875}
   m_Children:
   - {fileID: 1102118104}
@@ -5991,7 +5947,7 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &547797044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6034,18 +5990,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 547797045}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 803293310}
-        m_MethodName: OnClick7
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &547797045
@@ -6068,7 +6013,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 25772927264bacc43b92ea1c2baa0ffb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 51404efe01b60c54ba874f4b52b7c3df, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6788,7 +6733,7 @@ GameObject:
   - component: {fileID: 752184725}
   - component: {fileID: 752184724}
   m_Layer: 5
-  m_Name: BottomButton1
+  m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6856,18 +6801,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 752184725}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 803293310}
-        m_MethodName: OnBottomClick1
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &752184725
@@ -6890,7 +6824,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: ae5bd5f5095512d449b3dacb6e05847e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0a8fe0786fda5784483352f90714c594, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7246,7 +7180,6 @@ GameObject:
   - component: {fileID: 803293308}
   - component: {fileID: 803293307}
   - component: {fileID: 803293306}
-  - component: {fileID: 803293310}
   m_Layer: 5
   m_Name: Canvas_Quiz
   m_TagString: Untagged
@@ -7337,42 +7270,6 @@ RectTransform:
   m_AnchoredPosition: {x: 10.94, y: 3.5031}
   m_SizeDelta: {x: 124.08, y: 91.3272}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &803293310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 803293305}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc10c421a577d2246b333478d6ad3d4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  step1: {fileID: 319600755}
-  step2: {fileID: 812975439}
-  step3: {fileID: 1339670517}
-  step4: {fileID: 881131586}
-  step5: {fileID: 1462915839}
-  step6: {fileID: 376266288}
-  step7: {fileID: 547797044}
-  bottomButton1: {fileID: 752184724}
-  bottomButton2: {fileID: 220748985}
-  bottomButton3: {fileID: 2063935130}
-  bottomButton4: {fileID: 126807680}
-  bottomButton5: {fileID: 930542062}
-  bottomButton6: {fileID: 2085574226}
-  bottomButton7: {fileID: 1376034188}
-  currentBottomButton: {fileID: 0}
-  Blank: {fileID: 21300000, guid: ae5bd5f5095512d449b3dacb6e05847e, type: 3}
-  win1: {fileID: 21300000, guid: 6e5853e6f104ed34a966affb803576cd, type: 3}
-  win2: {fileID: 21300000, guid: 46ac42be3966822489383320084c5320, type: 3}
-  win3: {fileID: 21300000, guid: fcbb0babeffcb344ea570b36169e8eb6, type: 3}
-  win4: {fileID: 21300000, guid: 3d7303059ee0c2f47bd087acfd372c1d, type: 3}
-  win5: {fileID: 21300000, guid: f438f7602d768c64dbc601cbdc6ab9ae, type: 3}
-  win6: {fileID: 21300000, guid: 99ab314d3e5ee4d479aca9118a964627, type: 3}
-  win7: {fileID: 21300000, guid: 214696cd06bf57044a1f6dcd4d6b502f, type: 3}
-  win8: {fileID: 21300000, guid: 5a1af890d67f8794982682ca0324735f, type: 3}
 --- !u!1 &810521477
 GameObject:
   m_ObjectHideFlags: 0
@@ -7465,7 +7362,7 @@ GameObject:
   - component: {fileID: 812975440}
   - component: {fileID: 812975439}
   m_Layer: 5
-  m_Name: Step 2
+  m_Name: Button (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7479,7 +7376,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 812975437}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.0000029183855}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0000059405}
   m_LocalScale: {x: 0.14138657, y: 1.1789361, z: 0.3701875}
   m_Children:
   - {fileID: 1883714299}
@@ -7490,7 +7387,7 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &812975439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7533,18 +7430,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 812975440}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 803293310}
-        m_MethodName: OnClick2
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &812975440
@@ -7567,7 +7453,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: a6213ae5200243a42aec2c474aff4473, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0a8fe0786fda5784483352f90714c594, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7802,7 +7688,7 @@ GameObject:
   - component: {fileID: 881131587}
   - component: {fileID: 881131586}
   m_Layer: 5
-  m_Name: Step 4
+  m_Name: Button (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7816,7 +7702,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 881131584}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.000023347087}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0000059405}
   m_LocalScale: {x: 0.14138657, y: 1.1789361, z: 0.3701875}
   m_Children:
   - {fileID: 1294445510}
@@ -7827,7 +7713,7 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &881131586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7870,18 +7756,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 881131587}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 803293310}
-        m_MethodName: OnClick4
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &881131587
@@ -7904,7 +7779,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 8bec2a3cab1b34147924c54e0dc3e696, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f79a84b9072850943aef0152d1d6bac7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7939,7 +7814,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.587
+      value: 7.85
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7947,7 +7822,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.109
+      value: -4.24
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: m_LocalRotation.x
@@ -8289,7 +8164,7 @@ GameObject:
   - component: {fileID: 930542063}
   - component: {fileID: 930542062}
   m_Layer: 5
-  m_Name: BottomButton5
+  m_Name: Button (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8357,18 +8232,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 930542063}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 803293310}
-        m_MethodName: OnBottomClick5
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &930542063
@@ -8391,7 +8255,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: ae5bd5f5095512d449b3dacb6e05847e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f79a84b9072850943aef0152d1d6bac7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11625,7 +11489,7 @@ GameObject:
   - component: {fileID: 1339670518}
   - component: {fileID: 1339670517}
   m_Layer: 5
-  m_Name: Step 3
+  m_Name: Button (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11639,7 +11503,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1339670515}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.000026265468}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0000059405}
   m_LocalScale: {x: 0.14138657, y: 1.1789361, z: 0.3701875}
   m_Children:
   - {fileID: 183998184}
@@ -11650,7 +11514,7 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &1339670517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11693,18 +11557,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1339670518}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 803293310}
-        m_MethodName: OnClick3
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1339670518
@@ -11727,7 +11580,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 916d0bf5a8e92cb4b902a7ad5802dc67, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 51404efe01b60c54ba874f4b52b7c3df, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12000,7 +11853,7 @@ GameObject:
   - component: {fileID: 1376034189}
   - component: {fileID: 1376034188}
   m_Layer: 5
-  m_Name: BottomButton7
+  m_Name: Button (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12068,18 +11921,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1376034189}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 803293310}
-        m_MethodName: OnBottomClick7
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1376034189
@@ -12102,7 +11944,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: ae5bd5f5095512d449b3dacb6e05847e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 51404efe01b60c54ba874f4b52b7c3df, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12468,7 +12310,7 @@ GameObject:
   - component: {fileID: 1462915840}
   - component: {fileID: 1462915839}
   m_Layer: 5
-  m_Name: Step 5
+  m_Name: Button (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12482,7 +12324,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1462915837}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.000020428699}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0000059405}
   m_LocalScale: {x: 0.14138657, y: 1.1789361, z: 0.3701875}
   m_Children:
   - {fileID: 1354548079}
@@ -12493,7 +12335,7 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &1462915839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12536,18 +12378,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1462915840}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 803293310}
-        m_MethodName: OnClick5
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1462915840
@@ -12570,7 +12401,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f4b263c64dd1e7a438f07d594a6580ed, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0a8fe0786fda5784483352f90714c594, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -17317,7 +17148,7 @@ GameObject:
   - component: {fileID: 2063935131}
   - component: {fileID: 2063935130}
   m_Layer: 5
-  m_Name: BottomButton3
+  m_Name: Button (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17385,18 +17216,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2063935131}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 803293310}
-        m_MethodName: OnBottomClick3
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2063935131
@@ -17419,7 +17239,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: ae5bd5f5095512d449b3dacb6e05847e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 51404efe01b60c54ba874f4b52b7c3df, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -17619,7 +17439,7 @@ GameObject:
   - component: {fileID: 2085574227}
   - component: {fileID: 2085574226}
   m_Layer: 5
-  m_Name: BottomButton6
+  m_Name: Button (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17687,18 +17507,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2085574227}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 803293310}
-        m_MethodName: OnBottomClick6
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2085574227
@@ -17721,7 +17530,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: ae5bd5f5095512d449b3dacb6e05847e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0a8fe0786fda5784483352f90714c594, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
