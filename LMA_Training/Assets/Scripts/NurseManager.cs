@@ -7,6 +7,11 @@ public class NurseManager : MonoBehaviour
     private TextBoxScript tBS;
 
     public GameObject tBoxStep2;
+    public GameObject tBoxStep5;
+    public GameObject tBoxStep6;
+    public GameObject tBoxStep7;
+    public GameObject tBoxStep8;
+
     public GameObject ChinButton;
     private GameObject cButtonSpawn;
 
@@ -18,6 +23,12 @@ public class NurseManager : MonoBehaviour
     private bool step4;
     private bool step5;
     private bool step6;
+    private bool step7;
+    private bool step8;
+    private bool step9;
+    private bool step10;
+    private bool step11;
+    private bool step12;
 
     void Start()
     {
@@ -31,7 +42,7 @@ public class NurseManager : MonoBehaviour
     {
         if (step1 == true)
         {
-            //Speech goes here or whatever calls it
+            //Speech here or whatever calls it
 
             step1 = false;
             step2 = true;
@@ -39,7 +50,7 @@ public class NurseManager : MonoBehaviour
 
         if (step2 == true)
         {
-            //Speech goes here or whatever calls it
+            //Speech here or whatever calls it
 
             tBS.TextBox(tBoxStep2);
             Instantiate(ChinButton, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
@@ -52,6 +63,58 @@ public class NurseManager : MonoBehaviour
             step3 = true;
             GameObject tBoxS2 = GameObject.FindGameObjectWithTag("TextBoxStep2");
             Destroy(tBoxS2);
+        }
+
+        if (step3 == true)
+        {
+            //nurse animation here or whatevers calls it
+
+            step3 = false;
+            step4 = true;
+        }
+
+        if (step4 == true)
+        {
+            //speech here or whatever calls it
+
+            step4 = false;
+            step5 = true;
+        }
+
+        if (step5 == true)
+        {
+            //speech here or whatever calls it
+
+            tBS.TextBox(tBoxStep5);
+            step5 = false;
+            step6 = true;
+        }
+
+        if (step6 == true )
+        {
+            //speech here or whatever calls it
+
+            tBS.TextBox(tBoxStep6);
+            step6 = false;
+            step7 = true;
+        }
+
+        if (step7 == true)
+        {
+            //speech here or whatever calls it
+
+            tBS.TextBox(tBoxStep7);
+            step7 = false;
+            step8 = true; 
+        }
+
+        if (step8 == true)
+        {
+            //speech here or whatever calls it
+
+            tBS.TextBox(tBoxStep8);
+            step8 = false;
+            step9 = true;
         }
     }
 }
