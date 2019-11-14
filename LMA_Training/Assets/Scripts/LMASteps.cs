@@ -49,42 +49,73 @@ public class LMASteps : MonoBehaviour
         }
 
         if(bottomButton1.GetComponent<Image>().sprite == step1.GetComponent<Image>().sprite)
+        {
             correct1 = true;
+            bottomButton1.GetComponent<Image>().sprite = win1;
+        }
         else
             correct1 = false;
 
+
         if (bottomButton2.GetComponent<Image>().sprite == step2.GetComponent<Image>().sprite)
+        {
             correct2 = true;
+            bottomButton2.GetComponent<Image>().sprite = win2;
+        }
         else
             correct2 = false;
 
+
         if (bottomButton3.GetComponent<Image>().sprite == step3.GetComponent<Image>().sprite)
+        {
             correct3 = true;
+            bottomButton3.GetComponent<Image>().sprite = win3;
+        }
         else
             correct3 = false;
 
+
         if (bottomButton4.GetComponent<Image>().sprite == step4.GetComponent<Image>().sprite)
+        {
             correct4 = true;
+            bottomButton4.GetComponent<Image>().sprite = win4;
+        }
         else
             correct4 = false;
 
+
         if (bottomButton5.GetComponent<Image>().sprite == step5.GetComponent<Image>().sprite)
+        {
             correct5 = true;
+            bottomButton5.GetComponent<Image>().sprite = win5;
+        }
         else
             correct5 = false;
 
+
         if (bottomButton6.GetComponent<Image>().sprite == step6.GetComponent<Image>().sprite)
+        {
             correct6 = true;
+            bottomButton6.GetComponent<Image>().sprite = win6;
+        }
         else
             correct6 = false;
 
+
         if (bottomButton7.GetComponent<Image>().sprite == step7.GetComponent<Image>().sprite)
+        {
             correct7 = true;
+            bottomButton7.GetComponent<Image>().sprite = win7;
+        }
         else
             correct7 = false;
 
+
         if (bottomButton8.GetComponent<Image>().sprite == step8.GetComponent<Image>().sprite)
+        {
             correct8 = true;
+            bottomButton8.GetComponent<Image>().sprite = win8;
+        }
         else
             correct8 = false;
     }
@@ -206,7 +237,7 @@ public class LMASteps : MonoBehaviour
 
     public void OnClick1()
     {
-        if(win)
+        if(correct1)
         {
             return;
         }
@@ -237,7 +268,7 @@ public class LMASteps : MonoBehaviour
     }
     public void OnClick2()
     {
-        if (win)
+        if (correct2)
         {
             return;
         }
@@ -268,7 +299,7 @@ public class LMASteps : MonoBehaviour
     }
     public void OnClick3()
     {
-        if (win)
+        if (correct3)
         {
             return;
         }
@@ -299,7 +330,7 @@ public class LMASteps : MonoBehaviour
     }
     public void OnClick4()
     {
-        if (win)
+        if (correct4)
         {
             return;
         }
@@ -330,7 +361,7 @@ public class LMASteps : MonoBehaviour
     }
     public void OnClick5()
     {
-        if (win)
+        if (correct5)
         {
             return;
         }
@@ -361,7 +392,7 @@ public class LMASteps : MonoBehaviour
     }
     public void OnClick6()
     {
-        if (win)
+        if (correct6)
         {
             return;
         }
@@ -392,7 +423,7 @@ public class LMASteps : MonoBehaviour
     }
     public void OnClick7()
     {
-        if (win)
+        if (correct7)
         {
             return;
         }
@@ -423,7 +454,7 @@ public class LMASteps : MonoBehaviour
     }
     public void OnClick8()
     {
-        if (win)
+        if (correct8)
         {
             return;
         }
@@ -455,7 +486,7 @@ public class LMASteps : MonoBehaviour
 
     public void OnBottomClick1()
     {
-        if (win)
+        if (correct1)
         {
             return;
         }
@@ -472,7 +503,7 @@ public class LMASteps : MonoBehaviour
     }
     public void OnBottomClick2()
     {
-        if (win)
+        if (correct2)
         {
             return;
         }
@@ -489,7 +520,7 @@ public class LMASteps : MonoBehaviour
     }
     public void OnBottomClick3()
     {
-        if (win)
+        if (correct3)
         {
             return;
         }
@@ -506,7 +537,7 @@ public class LMASteps : MonoBehaviour
     }
     public void OnBottomClick4()
     {
-        if (win)
+        if (correct4)
         {
             return;
         }
@@ -523,7 +554,7 @@ public class LMASteps : MonoBehaviour
     }
     public void OnBottomClick5()
     {
-        if (win)
+        if (correct5)
         {
             return;
         }
@@ -540,7 +571,7 @@ public class LMASteps : MonoBehaviour
     }
     public void OnBottomClick6()
     {
-        if (win)
+        if (correct6)
         {
             return;
         }
@@ -557,7 +588,7 @@ public class LMASteps : MonoBehaviour
     }
     public void OnBottomClick7()
     {
-        if (win)
+        if (correct7)
         {
             return;
         }
@@ -574,12 +605,12 @@ public class LMASteps : MonoBehaviour
     }
     public void OnBottomClick8()
     {
-        if (win)
+        if (correct8)
         {
             return;
         }
 
-        bottomButton7.GetComponent<Image>().sprite = Blank;
+        bottomButton8.GetComponent<Image>().sprite = Blank;
         bottom1 = false;
         bottom2 = false;
         bottom3 = false;
