@@ -967,6 +967,60 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 27774398}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &40381189
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 40381191}
+  - component: {fileID: 40381190}
+  m_Layer: 0
+  m_Name: Audio Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &40381190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40381189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7b47d1b439c19b4fb2f06d3a8c9ea17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Dialogue_Step1: {fileID: 0}
+  m_Dialogue_Step2: {fileID: 0}
+  m_Dialogue_Step3: {fileID: 0}
+  m_Dialogue_Step4: {fileID: 0}
+  m_Dialogue_Step5: {fileID: 0}
+  m_Dialogue_Step6: {fileID: 0}
+  m_Dialogue_Step7: {fileID: 0}
+  m_Dialogue_Step9: {fileID: 0}
+  m_Dialogue_Step12: {fileID: 0}
+  m_Dialogue_Step13: {fileID: 0}
+  m_Dialogue_Step14: {fileID: 0}
+--- !u!4 &40381191
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40381189}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.222977, y: 2.7822337, z: -8.355129}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &59064131
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1198,6 +1252,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2075391117}
     m_Modifications:
+    - target: {fileID: 7731380996777812673, guid: 8d2b90530d53a4346a46c10ff3282ad7,
+        type: 3}
+      propertyPath: m_Name
+      value: Bed
+      objectReference: {fileID: 0}
     - target: {fileID: 6705925632237457618, guid: 8d2b90530d53a4346a46c10ff3282ad7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1252,11 +1311,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 7731380996777812673, guid: 8d2b90530d53a4346a46c10ff3282ad7,
-        type: 3}
-      propertyPath: m_Name
-      value: Bed
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d2b90530d53a4346a46c10ff3282ad7, type: 3}
