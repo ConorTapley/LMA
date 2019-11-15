@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private Animator LubeCaseAnimator;
     [SerializeField] private Animator removeCaseAnimator;
 
+    [SerializeField] private GameObject tiltHeadButton;
     [SerializeField] private GameObject removeCaseButton;
     [SerializeField] private GameObject lubeLMAButton;
     [SerializeField] private GameObject lubeCaseButton;
@@ -24,11 +25,19 @@ public class GameController : MonoBehaviour
     
     void Update()
     {
+        /*
         if(OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger) || OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger))
         {
             patientAnimator.Play("Patient Head Tilt");
             //Debug.Log("Trigger");
         }
+        */
+    }
+
+    public void TiltPatientsHead()
+    {
+        patientAnimator.Play("Patient Head Tilt");
+        tiltHeadButton.SetActive(false);
     }
 
     public void RemoveCase()
