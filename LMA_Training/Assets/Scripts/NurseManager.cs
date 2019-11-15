@@ -13,6 +13,8 @@ public class NurseManager : MonoBehaviour
     public GameObject tBoxStep8;
     public GameObject tBoxStep9;
     public GameObject tBoxStep12;
+    public GameObject tBoxStep14;
+    public GameObject tBoxStep15;
 
     public GameObject ChinButton;
     private GameObject cButtonSpawn;
@@ -33,6 +35,8 @@ public class NurseManager : MonoBehaviour
     private bool step12;
     private bool step13;
     private bool step14;
+    private bool step15;
+    private bool step16;
 
     void Start()
     {
@@ -154,6 +158,39 @@ public class NurseManager : MonoBehaviour
             tBS.TextBox(tBoxStep12);
             step12 = false;
             step13 = true;
+        }
+
+        if (step13 == true)
+        {
+            //animation here or whatever calls it
+
+            step13 = false;
+            step14 = true;
+        }
+
+        if (step14 == true)
+        {
+            //speech here or whatever calls it
+
+            tBS.TextBox(tBoxStep14);
+            step12 = false;
+            step15 = true;
+        }
+
+        if (step15 == true)
+        {
+            //animation here or whatever calls it
+
+            tBS.TextBox(tBoxStep15);
+            step15 = false;
+            step16 = true;
+        }
+
+        if (step16 == false)
+        {
+            //speech here or whatever calls it
+
+            step16 = false;
         }
            
     }
