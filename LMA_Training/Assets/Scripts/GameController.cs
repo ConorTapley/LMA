@@ -9,9 +9,13 @@ public class GameController : MonoBehaviour
     [SerializeField] private bool step1 = true, step2 = false, step3 = false, step4 = false, step5 = false, step6 = false, step7 = false, step8 = false;
 
     [SerializeField] private Animator patientAnimator;
-
+    [SerializeField] private Animator LubeLMAAnimator;
+    [SerializeField] private Animator LubeCaseAnimator;
     [SerializeField] private Animator removeCaseAnimator;
-    [SerializeField] private Button removeCaseButton;
+
+    [SerializeField] private GameObject removeCaseButton;
+    [SerializeField] private GameObject lubeLMAButton;
+    [SerializeField] private GameObject lubeCaseButton;
 
     void Start()
     {
@@ -30,6 +34,18 @@ public class GameController : MonoBehaviour
     public void RemoveCase()
     {
         removeCaseAnimator.Play("RomoveCase");
-        removeCaseButton.IsActive = false;
+        removeCaseButton.SetActive(false);
+    }
+
+    public void LubeLMA()
+    {
+        LubeLMAAnimator.Play("AddLubeToLMA");
+        lubeLMAButton.SetActive(false);
+    }
+
+    public void LubeCase()
+    {
+        LubeCaseAnimator.Play("AddLubeToCase");
+        lubeCaseButton.SetActive(false);
     }
 }
