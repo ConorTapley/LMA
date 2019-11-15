@@ -3405,7 +3405,7 @@ RectTransform:
   m_GameObject: {fileID: 486082109}
   m_LocalRotation: {x: 0, y: 0.7122711, z: -0, w: -0.7019045}
   m_LocalPosition: {x: 0, y: 0, z: -0.006}
-  m_LocalScale: {x: 0.00049898116, y: 0.00029079206, z: 0.001747659}
+  m_LocalScale: {x: 0.00073504914, y: 0.00042836578, z: 0.0025744762}
   m_Children:
   - {fileID: 911966365}
   m_Father: {fileID: 1689890727}
@@ -4585,7 +4585,7 @@ RectTransform:
   m_GameObject: {fileID: 853767856}
   m_LocalRotation: {x: -0, y: 0.9998462, z: -0, w: 0.01753971}
   m_LocalPosition: {x: 0, y: 0, z: -0.003}
-  m_LocalScale: {x: 0.0009920765, y: 0.00065893255, z: 0.0034747026}
+  m_LocalScale: {x: 0.0015476393, y: 0.0010279347, z: 0.005420536}
   m_Children:
   - {fileID: 1062037762}
   m_Father: {fileID: 2140204401}
@@ -4775,8 +4775,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 880469400}
   m_LocalRotation: {x: 0, y: 0.87630665, z: -0, w: -0.4817537}
-  m_LocalPosition: {x: 0, y: 0, z: -0.075}
-  m_LocalScale: {x: 0.0005722753, y: 0.00039534282, z: 0.0020043685}
+  m_LocalPosition: {x: 0, y: 0, z: -0.1391}
+  m_LocalScale: {x: 0.0013559903, y: 0.0009367537, z: 0.004749295}
   m_Children:
   - {fileID: 72644820}
   m_Father: {fileID: 1708499136}
@@ -4784,7 +4784,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 237.6, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.035, y: 0.055}
+  m_AnchoredPosition: {x: 0.0756, y: 0.055}
   m_SizeDelta: {x: 465, y: 416}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &880469402
@@ -5197,7 +5197,7 @@ RectTransform:
   m_GameObject: {fileID: 911966364}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6680938, y: 1.57207, z: 0.36319202}
+  m_LocalScale: {x: 1.0800405, y: 2.5414085, z: 0.5871362}
   m_Children:
   - {fileID: 344770282}
   m_Father: {fileID: 486082110}
@@ -6713,7 +6713,7 @@ RectTransform:
   m_GameObject: {fileID: 1062037758}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7730421, y: 1.4974245, z: 0.4202445}
+  m_LocalScale: {x: 1.1986791, y: 2.3219066, z: 0.6516311}
   m_Children:
   - {fileID: 829104668}
   m_Father: {fileID: 853767857}
@@ -7388,7 +7388,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26494
+  m_Name: pb_Mesh20486
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
