@@ -996,17 +996,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7b47d1b439c19b4fb2f06d3a8c9ea17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Dialogue_Step1: {fileID: 0}
-  m_Dialogue_Step2: {fileID: 0}
-  m_Dialogue_Step3: {fileID: 0}
-  m_Dialogue_Step4: {fileID: 0}
-  m_Dialogue_Step5: {fileID: 0}
-  m_Dialogue_Step6: {fileID: 0}
-  m_Dialogue_Step7: {fileID: 0}
-  m_Dialogue_Step9: {fileID: 0}
-  m_Dialogue_Step12: {fileID: 0}
-  m_Dialogue_Step13: {fileID: 0}
-  m_Dialogue_Step14: {fileID: 0}
+  m_DialogueStep1: {fileID: 8300000, guid: ad338d3c5c95ec44989026470fb85351, type: 3}
+  m_DialogueStep2: {fileID: 8300000, guid: 7fcf117025d9e5944af97314553416a4, type: 3}
+  m_DialogueStep4: {fileID: 8300000, guid: b77214912483eef489b2d292815660eb, type: 3}
+  m_DialogueStep5_Size1: {fileID: 8300000, guid: 73039bf66fa65ec4eb444eed58e8684a,
+    type: 3}
+  m_DialogueStep5_Size2: {fileID: 0}
+  m_DialogueStep5_Size3: {fileID: 0}
+  m_DialogueStep5_size4: {fileID: 0}
+  m_DialogueStep5_Size5: {fileID: 0}
+  m_DialogueStep6: {fileID: 8300000, guid: 657cccbe3da8d2a4687d3c70a4704be8, type: 3}
+  m_DialogueStep7: {fileID: 8300000, guid: 9dc81f4e053ad434daa1aa9947a9edbe, type: 3}
+  m_DialogueStep8: {fileID: 8300000, guid: 0b84f366ae4676c4991bcbf64af14003, type: 3}
+  m_DialogueStep9: {fileID: 8300000, guid: a596f8762f3f8c64481e21a3c85e5ece, type: 3}
+  m_DialogueStep10: {fileID: 8300000, guid: 36bb41a034f89724eb8ba7f6b975f71f, type: 3}
+  m_DialogueStep12: {fileID: 8300000, guid: a9a346ef997f9a2458516f2e188042c5, type: 3}
 --- !u!4 &40381191
 Transform:
   m_ObjectHideFlags: 0
