@@ -16,8 +16,14 @@ TagManager:
   - DetailsPage
   - ClipBoardManager
   - LMA
+<<<<<<< HEAD
   - Ground
   - Sound
+=======
+  - TextBoxSpawn
+  - ChinButtonSpawn
+  - TextBoxStep2
+>>>>>>> origin/Tutorial-steps
   layers:
   - Default
   - TransparentFX
