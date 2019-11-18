@@ -6,6 +6,9 @@ public class NurseManager : MonoBehaviour
 {
     private TextBoxScript tBS;
 
+    public AudioManager audioManager;
+    public AudioSource audioSource;
+
     public GameObject tBoxStep2;
     public GameObject tBoxStep5;
     public GameObject tBoxStep6;
@@ -19,56 +22,61 @@ public class NurseManager : MonoBehaviour
     public GameObject ChinButton;
     private GameObject cButtonSpawn;
 
-    public bool chinButtonClicked;
+    public bool chinButtonClicked = true;
 
-    private bool step1;
-    private bool step2;
-    private bool step3;
-    private bool step4;
-    private bool step5;
-    private bool step6;
-    private bool step7;
-    private bool step8;
-    private bool step9;
-    private bool step10;
-    private bool step11;
-    private bool step12;
-    private bool step13;
-    private bool step14;
-    private bool step15;
-    private bool step16;
+    public bool step1, step2, step3, step4, step5, step6, step7, step8,
+    step9, step10, step11, step12, step13, step14, step15, step16;
 
     void Start()
     {
+        audioManager = GameObject.Find("Audio Manager").GetComponent<AudioManager>();
+        audioSource = GameObject.Find("Audio Manager").GetComponent<AudioSource>();
+        
         tBS = GameObject.FindGameObjectWithTag("TextBoxSpawn").GetComponent<TextBoxScript>();
         cButtonSpawn = GameObject.FindGameObjectWithTag("ChinButtonSpawn");
         step1 = true;
     }
 
-    
     void Update()
     {
+
         if (step1 == true)
         {
-            //Speech here or whatever calls it
-
-            step1 = false;
-            step2 = true;
+            /* //Debug.LogError("[AUDIO MANAGER] Nurse Manager Step 1 is true... Continuing");
+            if (audioManager.m_AudioSource.clip == null && step1 == true)
+            {
+                //Debug.LogError("[AUDIO MANAGER] Clip slot is empty at Step1 - Inserting DialogueStep1 Clip.");
+                audioManager.m_AudioSource.clip = audioManager.m_DialogueStep1;
+                //Debug.LogError("[AUDIO MANAGER] Attempting to play DialogueStep1 audio...");
+                audioManager.m_AudioSource.Play();
+                step1 = false;
+                Debug.LogError("Step1 is now false");
+                if(step1 == false)
+                {
+                    audioManager.m_AudioSource.clip = null;
+                    Debug.LogError("Clip should now be removed...");
+                }
+            }
+            else
+            {
+               // Debug.LogError("[AUDIO MANAGER] Clip slot is NOT empty at Step1 - What to do now?");
+            }*/
         }
 
         if (step2 == true)
         {
+            //audioSource.clip = audioManager.m_DialogueStep2;
             //Speech here or whatever calls it
 
             tBS.TextBox(tBoxStep2);
             Instantiate(ChinButton, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
             ChinButton.transform.parent = cButtonSpawn.transform;
-            step2 = false;           
+            //step2 = false;    
         }
 
         if (chinButtonClicked == true)
         {
-            step3 = true;
+            //step3 = true;
             GameObject tBoxS2 = GameObject.FindGameObjectWithTag("TextBoxStep2");
             Destroy(tBoxS2);
         }
@@ -77,8 +85,8 @@ public class NurseManager : MonoBehaviour
         {
             //nurse animation here or whatevers calls it
 
-            step3 = false;
-            step4 = true;
+            //step3 = false;
+            //step4 = true;
         }
 
         if (step4 == true)

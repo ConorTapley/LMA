@@ -4,26 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Button
-  - Mouth
-  - Question3
-  - Question5
-  - Question2
-  - Question1
-  - Question6
-  - Question4
-  - Score
-  - DetailsPage
-  - ClipBoardManager
-  - LMA
-<<<<<<< HEAD
-  - Ground
-  - Sound
-=======
-  - TextBoxSpawn
-  - ChinButtonSpawn
   - TextBoxStep2
->>>>>>> origin/Tutorial-steps
+  - Sound
+  - Mouth
   layers:
   - Default
   - TransparentFX
@@ -33,7 +16,7 @@ TagManager:
   - UI
   - 
   - 
-  - Grababble
+  - 
   - 
   - 
   - 
