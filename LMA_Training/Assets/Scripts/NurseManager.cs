@@ -96,6 +96,8 @@ public class NurseManager : MonoBehaviour
             tBS.TextBox(tBoxStep5);
             step5 = false;
             step6 = true;
+            GameObject tBoxS5 = GameObject.FindGameObjectWithTag("TextBoxStep5");
+            Destroy(tBoxS5);
         }
 
         if (step6 == true )
