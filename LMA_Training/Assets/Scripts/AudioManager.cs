@@ -7,8 +7,6 @@ public class AudioManager : MonoBehaviour
     public NurseManager nurseManager;
     public AudioSource m_AudioSource;
 
-    public GameController game;
-
     public AudioClip m_DialogueStep1,
     m_DialogueStep2,
     m_DialogueStep4,
@@ -97,6 +95,7 @@ public class AudioManager : MonoBehaviour
             /////
             
             nurseManager.step4 = true;
+            //nurseManager.step3 = false;
         }
 
         if (nurseManager.step4 == true)
