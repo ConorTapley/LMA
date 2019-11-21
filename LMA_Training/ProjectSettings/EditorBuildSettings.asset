@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Scenes/Using/Playroom.unity
+    guid: 611f2f24f3aa6fa41b117a6eb73e9e1a
+  - enabled: 1
+    path: Assets/_Scenes/Using/Conor-Game.unity
+    guid: 8b677b83c065dc948b4c1ad363d4fd00
   m_configObjects: {}
