@@ -5,27 +5,37 @@ TagManager:
   serializedVersion: 2
   tags:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - TextBoxStep14
+=======
+  - Button
+  - Mouth
+>>>>>>> parent of 5960551... fixed some errors with merge
   - Question3
   - Question5
   - Question2
   - Question1
   - Question6
   - Question4
+  - Score
+  - DetailsPage
+  - ClipBoardManager
+  - LMA
+<<<<<<< HEAD
+  - TextBoxSpawn
+  - ChinButtonSpawn
+  - TextBoxStep2
   - TextBoxStep5
+  - TextBoxStep6
+  - TextBoxStep7
+  - TextBoxStep8
   - TextBoxStep9
   - TextBoxStep12
-  - Score
-  - Sound
-  - Mouth
-  - TextBoxStep7
-  - DetailsPage
-  - TextBoxStep8
-  - TextBoxStep6
+  - TextBoxStep14
   - TextBoxStep15
-  - TextBoxStep2
-  - TextBoxSpawn
+=======
   - Ground
+<<<<<<< HEAD
   - ChinButtonSpawn
   - ClipBoardManager
   - LMA
@@ -35,6 +45,10 @@ TagManager:
   - Sound
   - Mouth
 >>>>>>> Dev4
+=======
+  - Sound
+>>>>>>> Rhys
+>>>>>>> parent of 5960551... fixed some errors with merge
   layers:
   - Default
   - TransparentFX
@@ -44,7 +58,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Grababble
   - 
   - 
   - 

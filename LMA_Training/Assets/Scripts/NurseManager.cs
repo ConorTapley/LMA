@@ -20,7 +20,12 @@ public class NurseManager : MonoBehaviour
     public GameObject tBoxStep15;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private GameObject cButton;
+=======
+    public GameObject ChinButton;
+    private GameObject cButtonSpawn;
+>>>>>>> parent of 5960551... fixed some errors with merge
 
     private bool step1;
     private bool step2;
@@ -54,8 +59,7 @@ public class NurseManager : MonoBehaviour
         audioSource = GameObject.Find("Audio Manager").GetComponent<AudioSource>();
         
         tBS = GameObject.FindGameObjectWithTag("TextBoxSpawn").GetComponent<TextBoxScript>();
-        cButton = GameObject.FindGameObjectWithTag("ChinButton");
-        cButton.SetActive(false);
+        cButtonSpawn = GameObject.FindGameObjectWithTag("ChinButtonSpawn");
         step1 = true;
     }
 
@@ -92,7 +96,12 @@ public class NurseManager : MonoBehaviour
 
             tBS.TextBox(tBoxStep2);
 <<<<<<< HEAD
+<<<<<<< HEAD
             cButton.SetActive(true);
+=======
+            Instantiate(ChinButton, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+            ChinButton.transform.parent = cButtonSpawn.transform;
+>>>>>>> parent of 5960551... fixed some errors with merge
             step2 = false;           
         }
 
@@ -271,6 +280,6 @@ public class NurseManager : MonoBehaviour
     {
 
         step3 = true;
-        cButton.SetActive(false);
+        ChinButton.SetActive(false);
     }
 }
