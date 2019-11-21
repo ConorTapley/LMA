@@ -14,7 +14,7 @@ public class GameController : MonoBehaviour
 
     //NextStepArrows
     [SerializeField] private GameObject nextStepArrow2, nextStepArrow3, nextStepArrow4;
-
+    [SerializeField] private bool nextStepbool2 = false, nextStepbool3 = false, nextStepbool4 = false;
     /////Animatiors//////
     [SerializeField] private Animator patientAnimator;
     [SerializeField] private Animator LubeLMAAnimator;
@@ -46,13 +46,16 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
-        /*
-        if(OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger) || OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger))
-        {
-            patientAnimator.Play("Patient Head Tilt");
-            //Debug.Log("Trigger");
-        }
-        */
+        //When you pick the LMA let the audio be finished playing before the arrow appears to let you move to the next step
+        if(nextStepbool2 && !robotNurseAudioSource.isPlaying)
+            nextStepArrow2.SetActive(true); //<---activating the arrow button from picking the LMA to removing the LMA from its case
+
+        if (nextStepbool3 && !robotNurseAudioSource.isPlaying)
+            nextStepArrow3.SetActive(true); //<---activating the arrow button from removing the LMA from its case to lubricating the case
+
+        if (nextStepbool4 && !robotNurseAudioSource.isPlaying)
+            nextStepArrow4.SetActive(true); //<---activating the arrow button from lubricating the case to lubricating the LMA
+
     }
 
 
@@ -91,8 +94,9 @@ public class GameController : MonoBehaviour
         selectLMA3.SetActive(false);
         selectLMA5.SetActive(false);
 
-        nextStepArrow2.SetActive(true);
+        
         pickLMAButton.SetActive(false);
+        nextStepbool2 = true;
     }
 
     //////////////////////NEXT STEP/////////////////////     from picking the lma to removing the case
@@ -112,7 +116,7 @@ public class GameController : MonoBehaviour
     {
         removeCaseAnimator.Play("RomoveCase");
         removeCaseButton.SetActive(false);
-        nextStepArrow3.SetActive(true);
+        nextStepbool3 = true;
     }
 
     //////////////////////NEXT STEP/////////////////////    from removing the case to lubricating the case
@@ -132,7 +136,7 @@ public class GameController : MonoBehaviour
     {
         LubeCaseAnimator.Play("AddLubeToCase");
         lubeCaseButton.SetActive(false);
-        nextStepArrow4.SetActive(true);
+        nextStepbool4 = true;
     }
 
     //////////////////////NEXT STEP/////////////////////    from lubricating the case to lubricating the LMA
