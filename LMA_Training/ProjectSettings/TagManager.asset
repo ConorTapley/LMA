@@ -16,6 +16,7 @@ TagManager:
   - DetailsPage
   - ClipBoardManager
   - LMA
+<<<<<<< HEAD
   - TextBoxSpawn
   - ChinButtonSpawn
   - TextBoxStep2
@@ -27,6 +28,10 @@ TagManager:
   - TextBoxStep12
   - TextBoxStep14
   - TextBoxStep15
+=======
+  - Ground
+  - Sound
+>>>>>>> Rhys
   layers:
   - Default
   - TransparentFX

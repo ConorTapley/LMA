@@ -1,6 +1,12 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:LMA_Training/Assets/Prefabs/TextBox3.prefab.meta
 guid: ee28d62c27f32e0409101ab246f3600a
 PrefabImporter:
+=======
+guid: 3614a870069e98548bc52fa23b5fd96d
+folderAsset: yes
+DefaultImporter:
+>>>>>>> Rhys:LMA_Training/Assets/Sprites.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
