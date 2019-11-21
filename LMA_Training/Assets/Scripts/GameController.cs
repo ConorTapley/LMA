@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour
 {
     //each part of the game can only be played if the bool for it is true
     [SerializeField] private bool step1 = true, step2 = false, step3 = false, step4 = false, step5 = false, step6 = false, step7 = false, step8 = false;
+    [SerializeField] private GameObject stepObj1, stepObj2, stepObj3, stepObj4, stepObj5, stepObj6, stepObj7, stepObj8;
 
     [SerializeField] private Animator patientAnimator;
     [SerializeField] private Animator LubeLMAAnimator;
