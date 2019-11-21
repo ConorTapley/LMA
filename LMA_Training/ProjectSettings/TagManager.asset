@@ -7,6 +7,20 @@ TagManager:
   - TextBoxStep2
   - Sound
   - Mouth
+  - TextBoxSpawn
+  - Ground
+  - ChinButtonSpawn
+  - ClipBoardManager
+  - Score
+  - Question6
+  - Question4
+  - Question2
+  - Question1
+  - Question3
+  - Question5
+  - DetailsPage
+  - LMA
+  - TextBoxStep15
   layers:
   - Default
   - TransparentFX

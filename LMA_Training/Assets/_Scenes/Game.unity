@@ -997,8 +997,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7b47d1b439c19b4fb2f06d3a8c9ea17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nurseManager: {fileID: 0}
-  m_AudioSource: {fileID: 0}
+  nurseManager: {fileID: 2012516993}
+  m_AudioSource: {fileID: 40381192}
   m_DialogueStep1: {fileID: 8300000, guid: a4fafe2504dead14c9d0bde39ee5642f, type: 3}
   m_DialogueStep2: {fileID: 8300000, guid: 49ad3a74571ef494ca58849bf3f08445, type: 3}
   m_DialogueStep4: {fileID: 8300000, guid: d7b9d6630df592645bc85aa5daf1db5f, type: 3}
@@ -8879,8 +8879,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5893048f7063dec4390b668e3bc212c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioManager: {fileID: 0}
-  audioSource: {fileID: 0}
+  audioManager: {fileID: 40381190}
+  audioSource: {fileID: 40381192}
   tBoxStep2: {fileID: 3948064016389941175, guid: f2144c02b4fb04a44ace40dea9b6033b,
     type: 3}
   tBoxStep5: {fileID: 7849846245446010110, guid: 37f42aee62fc25f439936579585f3e7c,
@@ -8897,7 +8897,7 @@ MonoBehaviour:
     type: 3}
   tBoxStep14: {fileID: 8572595114250731694, guid: 1d83350c206841a4eb71588c817b07de,
     type: 3}
-  tBoxStep15: {fileID: 1042702250205945197, guid: ef56d84e4095ba340ba15c0bd7aa4dc6,
+  tBoxStep15: {fileID: 2920933018137647093, guid: ef56d84e4095ba340ba15c0bd7aa4dc6,
     type: 3}
   ChinButton: {fileID: 6023170591112827481, guid: ec5f904d2b8a0e8418e1a5e3f3fc0101,
     type: 3}
