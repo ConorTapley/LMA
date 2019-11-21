@@ -4,6 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - TextBoxStep14
   - Question3
   - Question5
@@ -29,6 +30,11 @@ TagManager:
   - ClipBoardManager
   - LMA
   - ChinButton
+=======
+  - TextBoxStep2
+  - Sound
+  - Mouth
+>>>>>>> Dev4
   layers:
   - Default
   - TransparentFX
