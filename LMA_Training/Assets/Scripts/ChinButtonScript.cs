@@ -17,8 +17,9 @@ public class ChinButtonScript : MonoBehaviour
         
     }
 
-    public void ButtonPress()
+    public void OnClick()
     {
-        nMS.chinButtonClicked = true;
+        nMS.chinButtonClick();
     }
+   
 }

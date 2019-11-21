@@ -16,8 +16,7 @@ public class NurseManager : MonoBehaviour
     public GameObject tBoxStep14;
     public GameObject tBoxStep15;
 
-    public GameObject ChinButton;
-    private GameObject cButtonSpawn;
+    private GameObject cButton;
 
     private bool step1;
     private bool step2;
@@ -39,7 +38,8 @@ public class NurseManager : MonoBehaviour
     void Start()
     {
         tBS = GameObject.FindGameObjectWithTag("TextBoxSpawn").GetComponent<TextBoxScript>();
-        cButtonSpawn = GameObject.FindGameObjectWithTag("ChinButtonSpawn");
+        cButton = GameObject.FindGameObjectWithTag("ChinButton");
+        cButton.SetActive(false);
         step1 = true;
     }
 
@@ -59,8 +59,7 @@ public class NurseManager : MonoBehaviour
             //Speech here or whatever calls it
 
             tBS.TextBox(tBoxStep2);
-            Instantiate(ChinButton, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
-            ChinButton.transform.parent = cButtonSpawn.transform;
+            cButton.SetActive(true);
             step2 = false;           
         }
 
@@ -220,6 +219,6 @@ public class NurseManager : MonoBehaviour
     {
 
         step3 = true;
-        ChinButton.SetActive(false);
+        cButton.SetActive(false);
     }
 }
