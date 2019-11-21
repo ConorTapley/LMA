@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
     //each part of the game can only be played if the bool for it is true
-    [SerializeField] private bool step1 = true, step2 = false, step3 = false, step4 = false, step5 = false, step6 = false, step7 = false, step8 = false;
     [SerializeField] private GameObject startTVScreen, stepObj1, stepObj2, stepObj3, stepObj4, stepObj5, stepObj6, stepObj7, stepObj8;
 
     //Select the LMA
@@ -14,7 +13,7 @@ public class GameController : MonoBehaviour
 
     //NextStepArrows
     [SerializeField] private GameObject nextStepArrow2, nextStepArrow3, nextStepArrow4;
-    [SerializeField] private bool nextStepbool2 = false, nextStepbool3 = false, nextStepbool4 = false;
+    private bool nextStepbool2 = false, nextStepbool3 = false, nextStepbool4 = false;
     /////Animatiors//////
     [SerializeField] private Animator patientAnimator;
     [SerializeField] private Animator LubeLMAAnimator;
@@ -27,13 +26,12 @@ public class GameController : MonoBehaviour
 
     /////Audio/////
     [SerializeField] AudioSource robotNurseAudioSource;
-    [SerializeField] AudioClip lubeCaseAudio, lubeLMAAudio, PickLMAAudio, RemoveCaseAudio;
+    [SerializeField] AudioClip startAudio, lubeCaseAudio, lubeLMAAudio, PickLMAAudio, RemoveCaseAudio;
 
 
     void Start()
     {
-        startTVScreen.SetActive(true);
-        tvStartButton.SetActive(true);
+        tvStartButton.SetActive(false);
 
         stepObj2.SetActive(false);
         nextStepArrow2.SetActive(false);
@@ -42,6 +40,8 @@ public class GameController : MonoBehaviour
         stepObj4.SetActive(false);
         nextStepArrow4.SetActive(false);
         stepObj5.SetActive(false);
+
+        robotNurseAudioSource.PlayOneShot(startAudio);
     }
 
     void Update()
@@ -56,6 +56,8 @@ public class GameController : MonoBehaviour
         if (nextStepbool4 && !robotNurseAudioSource.isPlaying)
             nextStepArrow4.SetActive(true); //<---activating the arrow button from lubricating the case to lubricating the LMA
 
+        if (!robotNurseAudioSource.isPlaying)
+            tvStartButton.SetActive(true);
     }
 
 
