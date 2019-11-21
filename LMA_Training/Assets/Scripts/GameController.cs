@@ -15,13 +15,20 @@ public class GameController : MonoBehaviour
     //NextStepArrows
     [SerializeField] private GameObject nextStepArrow2, nextStepArrow3, nextStepArrow4;
 
+    /////Animatiors//////
     [SerializeField] private Animator patientAnimator;
     [SerializeField] private Animator LubeLMAAnimator;
     [SerializeField] private Animator LubeCaseAnimator;
     [SerializeField] private Animator removeCaseAnimator;
 
+    ///////Action Buttons////////
     [SerializeField] private GameObject tiltHeadButton;
     [SerializeField] private GameObject tvStartButton, pickLMAButton, removeCaseButton, lubeCaseButton, lubeLMAButton;
+
+    /////Audio/////
+    [SerializeField] AudioSource robotNurseAudioSource;
+    [SerializeField] AudioClip lubeCaseAudio, lubeLMAAudio, PickLMAAudio, RemoveCaseAudio;
+
 
     void Start()
     {
@@ -55,6 +62,8 @@ public class GameController : MonoBehaviour
         startTVScreen.SetActive(false);
         tvStartButton.SetActive(false);
         stepObj2.SetActive(true);
+
+        robotNurseAudioSource.PlayOneShot(PickLMAAudio);
     }
 
 
@@ -86,11 +95,13 @@ public class GameController : MonoBehaviour
         pickLMAButton.SetActive(false);
     }
 
-    //////////////////////NEXT STEP/////////////////////
+    //////////////////////NEXT STEP/////////////////////     from picking the lma to removing the case
     public void NextStep2()
     {
         stepObj2.SetActive(false);
         stepObj3.SetActive(true);
+
+        robotNurseAudioSource.PlayOneShot(RemoveCaseAudio);
     }
 
 
@@ -104,11 +115,13 @@ public class GameController : MonoBehaviour
         nextStepArrow3.SetActive(true);
     }
 
-    //////////////////////NEXT STEP/////////////////////
+    //////////////////////NEXT STEP/////////////////////    from removing the case to lubricating the case
     public void NextStep3()
     {
         stepObj3.SetActive(false);
         stepObj4.SetActive(true);
+
+        robotNurseAudioSource.PlayOneShot(lubeCaseAudio);
     }
 
 
@@ -122,11 +135,13 @@ public class GameController : MonoBehaviour
         nextStepArrow4.SetActive(true);
     }
 
-    //////////////////////NEXT STEP/////////////////////
+    //////////////////////NEXT STEP/////////////////////    from lubricating the case to lubricating the LMA
     public void NextStep4()
     {
         stepObj4.SetActive(false);
         stepObj5.SetActive(true);
+
+        robotNurseAudioSource.PlayOneShot(lubeLMAAudio);
     }
 
 
