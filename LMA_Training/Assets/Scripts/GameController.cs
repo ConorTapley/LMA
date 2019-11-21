@@ -7,7 +7,7 @@ public class GameController : MonoBehaviour
 {
     //each part of the game can only be played if the bool for it is true
     [SerializeField] private bool step1 = true, step2 = false, step3 = false, step4 = false, step5 = false, step6 = false, step7 = false, step8 = false;
-    [SerializeField] private GameObject stepObj1, stepObj2, stepObj3, stepObj4, stepObj5, stepObj6, stepObj7, stepObj8;
+    [SerializeField] private GameObject startTVScreen, stepObj1, stepObj2, stepObj3, stepObj4, stepObj5, stepObj6, stepObj7, stepObj8;
 
     //Select the LMA
     [SerializeField] private GameObject selectLMA1, selectLMA2, selectLMA3, selectLMA5;
@@ -21,12 +21,14 @@ public class GameController : MonoBehaviour
     [SerializeField] private Animator removeCaseAnimator;
 
     [SerializeField] private GameObject tiltHeadButton;
-    [SerializeField] private GameObject pickLMAButton, removeCaseButton, lubeCaseButton, lubeLMAButton;
+    [SerializeField] private GameObject tvStartButton, pickLMAButton, removeCaseButton, lubeCaseButton, lubeLMAButton;
 
     void Start()
     {
-        stepObj2.SetActive(true);
+        startTVScreen.SetActive(true);
+        tvStartButton.SetActive(true);
 
+        stepObj2.SetActive(false);
         nextStepArrow2.SetActive(false);
         stepObj3.SetActive(false);
         nextStepArrow3.SetActive(false);
@@ -45,6 +47,17 @@ public class GameController : MonoBehaviour
         }
         */
     }
+
+
+    //Start TV//
+    public void StartTV()
+    {
+        startTVScreen.SetActive(false);
+        tvStartButton.SetActive(false);
+        stepObj2.SetActive(true);
+    }
+
+
 
     //1
     public void Clipboard()
