@@ -12812,8 +12812,8 @@ MonoBehaviour:
   stepObj8: {fileID: 1350365210}
   selectLMA1: {fileID: 880629872}
   selectLMA2: {fileID: 1588079833}
-  selectLMA3: {fileID: 1484838566}
-  selectLMA5: {fileID: 1521128023}
+  selectLMA3: {fileID: 1521128023}
+  selectLMA5: {fileID: 1484838566}
   nextStepArrow2: {fileID: 579155751}
   nextStepArrow3: {fileID: 790120460}
   nextStepArrow4: {fileID: 1122150712}
