@@ -19,6 +19,14 @@ TagManager:
   - TextBoxSpawn
   - ChinButtonSpawn
   - TextBoxStep2
+  - TextBoxStep5
+  - TextBoxStep6
+  - TextBoxStep7
+  - TextBoxStep8
+  - TextBoxStep9
+  - TextBoxStep12
+  - TextBoxStep14
+  - TextBoxStep15
   layers:
   - Default
   - TransparentFX

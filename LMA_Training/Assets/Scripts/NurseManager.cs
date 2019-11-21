@@ -19,8 +19,6 @@ public class NurseManager : MonoBehaviour
     public GameObject ChinButton;
     private GameObject cButtonSpawn;
 
-    public bool chinButtonClicked;
-
     private bool step1;
     private bool step2;
     private bool step3;
@@ -66,16 +64,12 @@ public class NurseManager : MonoBehaviour
             step2 = false;           
         }
 
-        if (chinButtonClicked == true)
-        {
-            step3 = true;
-            GameObject tBoxS2 = GameObject.FindGameObjectWithTag("TextBoxStep2");
-            Destroy(tBoxS2);
-        }
-
         if (step3 == true)
         {
             //nurse animation here or whatevers calls it
+
+            GameObject tBoxS2 = GameObject.FindGameObjectWithTag("TextBoxStep2");
+            Destroy(tBoxS2);
 
             step3 = false;
             step4 = true;
@@ -96,12 +90,14 @@ public class NurseManager : MonoBehaviour
             tBS.TextBox(tBoxStep5);
             step5 = false;
             step6 = true;
-            GameObject tBoxS5 = GameObject.FindGameObjectWithTag("TextBoxStep5");
-            Destroy(tBoxS5);
+      
         }
 
         if (step6 == true )
         {
+            GameObject tBoxS5 = GameObject.FindGameObjectWithTag("TextBoxStep5");
+            Destroy(tBoxS5);
+
             //speech here or whatever calls it
 
             tBS.TextBox(tBoxStep6);
@@ -111,6 +107,9 @@ public class NurseManager : MonoBehaviour
 
         if (step7 == true)
         {
+            GameObject tBoxS6 = GameObject.FindGameObjectWithTag("TextBoxStep6");
+            Destroy(tBoxS6);
+
             //speech here or whatever calls it
 
             tBS.TextBox(tBoxStep7);
@@ -120,6 +119,9 @@ public class NurseManager : MonoBehaviour
 
         if (step8 == true)
         {
+            GameObject tBoxS7 = GameObject.FindGameObjectWithTag("TextBoxStep7");
+            Destroy(tBoxS7);
+
             //speech here or whatever calls it
 
             tBS.TextBox(tBoxStep8);
@@ -129,6 +131,9 @@ public class NurseManager : MonoBehaviour
 
         if (step9 == true)
         {
+            GameObject tBoxS8 = GameObject.FindGameObjectWithTag("TextBoxStep8");
+            Destroy(tBoxS8);
+
             //speech here or whatever calls it
             //animation here or whatever calls it
 
@@ -139,6 +144,9 @@ public class NurseManager : MonoBehaviour
 
         if (step10 == true)
         {
+            GameObject tBoxS9 = GameObject.FindGameObjectWithTag("TextBoxStep9");
+            Destroy(tBoxS9);
+
             //speech here or whatever calls it
 
             step10 = false;
@@ -164,6 +172,9 @@ public class NurseManager : MonoBehaviour
 
         if (step13 == true)
         {
+            GameObject tBoxS12 = GameObject.FindGameObjectWithTag("TextBoxStep12");
+            Destroy(tBoxS12);
+
             //animation here or whatever calls it
 
             step13 = false;
@@ -172,6 +183,8 @@ public class NurseManager : MonoBehaviour
 
         if (step14 == true)
         {
+            GameObject tBoxS13 = GameObject.FindGameObjectWithTag("TextBoxStep13");
+            Destroy(tBoxS13);
             //speech here or whatever calls it
 
             tBS.TextBox(tBoxStep14);
@@ -181,6 +194,9 @@ public class NurseManager : MonoBehaviour
 
         if (step15 == true)
         {
+            GameObject tBoxS14 = GameObject.FindGameObjectWithTag("TextBoxStep14");
+            Destroy(tBoxS14);
+
             //animation here or whatever calls it
 
             tBS.TextBox(tBoxStep15);
@@ -190,10 +206,20 @@ public class NurseManager : MonoBehaviour
 
         if (step16 == false)
         {
+            GameObject tBoxS15 = GameObject.FindGameObjectWithTag("TextBoxStep15");
+            Destroy(tBoxS15);
+
             //speech here or whatever calls it
 
             step16 = false;
         }
            
+    }
+
+    public void chinButtonClick()
+    {
+
+        step3 = true;
+        ChinButton.SetActive(false);
     }
 }
