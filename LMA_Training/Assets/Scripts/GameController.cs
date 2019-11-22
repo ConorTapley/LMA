@@ -56,6 +56,7 @@ public class GameController : MonoBehaviour
         if (nextStepbool4 && !robotNurseAudioSource.isPlaying)
             nextStepArrow4.SetActive(true); //<---activating the arrow button from lubricating the case to lubricating the LMA
 
+        //wait till the robot finishes talking at the start of the scene before you can use the tv
         if (!robotNurseAudioSource.isPlaying)
             tvStartButton.SetActive(true);
     }

@@ -13287,14 +13287,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8327b7be62cbcc44a04df48d740fc19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  step1: 1
-  step2: 0
-  step3: 0
-  step4: 0
-  step5: 0
-  step6: 0
-  step7: 0
-  step8: 0
   startTVScreen: {fileID: 1068523751}
   stepObj1: {fileID: 1064384175}
   stepObj2: {fileID: 1532073291}
@@ -13322,6 +13314,7 @@ MonoBehaviour:
   lubeCaseButton: {fileID: 1062037758}
   lubeLMAButton: {fileID: 911966364}
   robotNurseAudioSource: {fileID: 943157067}
+  startAudio: {fileID: 8300000, guid: a4fafe2504dead14c9d0bde39ee5642f, type: 3}
   lubeCaseAudio: {fileID: 8300000, guid: 319e04b680af9304c91e4befa6499df1, type: 3}
   lubeLMAAudio: {fileID: 8300000, guid: f7f6adfbc075c2a44988d513d6351dec, type: 3}
   PickLMAAudio: {fileID: 8300000, guid: b10f54b8bec1870408debd3e7b76ddf3, type: 3}
