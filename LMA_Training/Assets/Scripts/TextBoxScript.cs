@@ -24,7 +24,7 @@ public class TextBoxScript : MonoBehaviour
     public void TextBox(GameObject popUpText)
     {
         Instantiate(popUpText, new Vector3(transform.position.x,transform.position.y,transform.position.z),Quaternion.identity );
-        popUpText.transform.parent = tSpawn.transform; 
+        //popUpText.transform.parent = tSpawn.transform; 
         
     }
 }

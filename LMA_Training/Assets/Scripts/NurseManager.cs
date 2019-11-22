@@ -20,6 +20,8 @@ public class NurseManager : MonoBehaviour
     public GameObject tBoxStep15;
 
     public GameObject ChinButton;
+
+    private bool S2repeatCheck;
     
 
     public bool chinButtonClicked = true    ;
@@ -37,6 +39,7 @@ public class NurseManager : MonoBehaviour
         ChinButton.SetActive(false);
         
         step1 = true;
+        S2repeatCheck = true;
     }
 
     void Update()
@@ -69,15 +72,18 @@ public class NurseManager : MonoBehaviour
         {
             //audioSource.clip = audioManager.m_DialogueStep2;
             //Speech here or whatever calls it
-
-            tBS.TextBox(tBoxStep2);
+            if (S2repeatCheck == true)
+            {
+                tBS.TextBox(tBoxStep2);
+            }
+            S2repeatCheck = false;
             ChinButton.SetActive(true);
-            step2 = false;    
+            //step2 = false;    
         }
 
         if (chinButtonClicked == true)
         {
-            step3 = true;
+            //step3 = true;
             GameObject tBoxS2 = GameObject.FindGameObjectWithTag("TextBoxStep2");
             Destroy(tBoxS2);
         }
@@ -86,16 +92,16 @@ public class NurseManager : MonoBehaviour
         {
             //nurse animation here or whatevers calls it
 
-            step3 = false;
-            step4 = true;
+            //step3 = false;
+           // step4 = true;
         }
 
         if (step4 == true)
         {
             //speech here or whatever calls it
 
-            step4 = false;
-            step5 = true;
+            //step4 = false;
+            //step5 = true;
         }
 
         if (step5 == true)
