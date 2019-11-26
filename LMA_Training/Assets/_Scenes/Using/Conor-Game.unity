@@ -13832,15 +13832,16 @@ MonoBehaviour:
   lubeLMAButton: {fileID: 911966364}
   robotNurseAudioSource: {fileID: 943157067}
   startAudio: {fileID: 8300000, guid: a4fafe2504dead14c9d0bde39ee5642f, type: 3}
-  lubeCaseAudio: {fileID: 8300000, guid: 319e04b680af9304c91e4befa6499df1, type: 3}
-  lubeLMAAudio: {fileID: 8300000, guid: f7f6adfbc075c2a44988d513d6351dec, type: 3}
-  PickLMAAudio: {fileID: 8300000, guid: b10f54b8bec1870408debd3e7b76ddf3, type: 3}
-  RemoveCaseAudio: {fileID: 8300000, guid: 005732f1c9597214b9d1802f94ad8eed, type: 3}
-  clipboardAudio: {fileID: 0}
-  checkLMAForLubeInsideAudio: {fileID: 0}
-  tiltHeadAudio: {fileID: 0}
-  grabLMAAudio: {fileID: 0}
-  IncertLMAAudio: {fileID: 0}
+  lubeCaseAudio: {fileID: 8300000, guid: 897ed445fad9b3c40996fe33585c00fb, type: 3}
+  lubeLMAAudio: {fileID: 8300000, guid: ce3e0cc2c94c0af479d8ed7e8d5279a5, type: 3}
+  PickLMAAudio: {fileID: 8300000, guid: 03eaf07a1478b514fabb122fbde7fbe0, type: 3}
+  RemoveCaseAudio: {fileID: 8300000, guid: f83baa2af07ce6744ae934f8c9ba77b8, type: 3}
+  clipboardAudio: {fileID: 8300000, guid: 5db5c6c2751acad42b6dfc5f09871e2c, type: 3}
+  checkLMAForLubeInsideAudio: {fileID: 8300000, guid: ef427b06f7086df47acef31a8a1366e8,
+    type: 3}
+  tiltHeadAudio: {fileID: 8300000, guid: 49ad3a74571ef494ca58849bf3f08445, type: 3}
+  grabLMAAudio: {fileID: 8300000, guid: b2b948a51c9c8fd479fa70d2194ff242, type: 3}
+  IncertLMAAudio: {fileID: 8300000, guid: 261b2e7c20a3cd6499decccce51374c7, type: 3}
 --- !u!4 &2001750222
 Transform:
   m_ObjectHideFlags: 0

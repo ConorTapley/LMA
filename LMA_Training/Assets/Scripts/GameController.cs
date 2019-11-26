@@ -27,7 +27,11 @@ public class GameController : MonoBehaviour
     /////Audio/////
     [SerializeField] AudioSource robotNurseAudioSource;
     [SerializeField] AudioClip startAudio, lubeCaseAudio, lubeLMAAudio, PickLMAAudio, RemoveCaseAudio, clipboardAudio, checkLMAForLubeInsideAudio, tiltHeadAudio, grabLMAAudio, IncertLMAAudio;
-    private bool hasPlayedIntro = false, hasPlayedClipboard = false, hasPlayedLubeLMA = false, hasPlayedCheckLMA = false, hasPlayedHeadTilt = false;
+    private bool hasPlayedIntro = false, hasPlayedClipboard = false, hasPlayedLubeLMA = false, hasPlayedCheckLMA = false, hasPlayedHeadTilt = false, hasPlayedGrabLMA = false, hasPlayedIncertLMA = false;
+    private bool playGrabLMA = false;
+
+    public IncertLMA incertLMAScript;
+    [SerializeField] private bool LMAInMouth = false;
 
     void Start()
     {
@@ -47,11 +51,14 @@ public class GameController : MonoBehaviour
             robotNurseAudioSource.PlayOneShot(startAudio);
             hasPlayedIntro = true;
         }
+
         
     }
 
     void Update()
     {
+        LMAInMouth = incertLMAScript.inMouth;
+
         if (hasPlayedIntro && !hasPlayedClipboard && !robotNurseAudioSource.isPlaying)
         {
             robotNurseAudioSource.PlayOneShot(clipboardAudio);
@@ -86,6 +93,18 @@ public class GameController : MonoBehaviour
             robotNurseAudioSource.PlayOneShot(tiltHeadAudio); //<-------------------- play the audio to tilt the patients head
             hasPlayedHeadTilt = true;
             tiltHeadButton.SetActive(true);
+        }
+
+        if(playGrabLMA && !hasPlayedGrabLMA && !robotNurseAudioSource.isPlaying)
+        {
+            robotNurseAudioSource.PlayOneShot(grabLMAAudio); //<----------------------pick up the LMA audio
+            hasPlayedGrabLMA = true;
+        }
+
+        if(!hasPlayedIncertLMA && hasPlayedGrabLMA && !robotNurseAudioSource.isPlaying)
+        {
+            robotNurseAudioSource.PlayOneShot(IncertLMAAudio);
+            hasPlayedIncertLMA = true;
         }
         
     }
@@ -205,6 +224,8 @@ public class GameController : MonoBehaviour
     {
         patientAnimator.Play("Patient Head Tilt");
         tiltHeadButton.SetActive(false);
+
+        playGrabLMA = true;
     }
 
     //////////////////////NEXT STEP/////////////////////
