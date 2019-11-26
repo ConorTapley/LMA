@@ -26,8 +26,8 @@ public class GameController : MonoBehaviour
 
     /////Audio/////
     [SerializeField] AudioSource robotNurseAudioSource;
-    [SerializeField] AudioClip startAudio, lubeCaseAudio, lubeLMAAudio, PickLMAAudio, RemoveCaseAudio, clipboard;
-    private bool hasPlayedIntro = false, hasPlayedClipboard = false;
+    [SerializeField] AudioClip startAudio, lubeCaseAudio, lubeLMAAudio, PickLMAAudio, RemoveCaseAudio, clipboard, checkLMAForLubeInside;
+    private bool hasPlayedIntro = false, hasPlayedClipboard = false, hasPlayedLubeLMA = false, hasPlayedCheckLMA = false;
 
     void Start()
     {
@@ -60,6 +60,14 @@ public class GameController : MonoBehaviour
 
         if (nextStepbool4 && !robotNurseAudioSource.isPlaying)
             nextStepArrow4.SetActive(true); //<---activating the arrow button from lubricating the case to lubricating the LMA
+
+
+        if(!hasPlayedCheckLMA && hasPlayedLubeLMA && !robotNurseAudioSource.isPlaying)
+        {
+            robotNurseAudioSource.PlayOneShot(checkLMAForLubeInside); //<------- play the audio to check if there is lube inside the lma
+            hasPlayedCheckLMA = true;
+        }
+
 
         if(hasPlayedIntro && !hasPlayedClipboard &&!robotNurseAudioSource.isPlaying)
         {
@@ -160,6 +168,7 @@ public class GameController : MonoBehaviour
         stepObj5.SetActive(true);
 
         robotNurseAudioSource.PlayOneShot(lubeLMAAudio);
+        hasPlayedLubeLMA = true;
     }
 
 
