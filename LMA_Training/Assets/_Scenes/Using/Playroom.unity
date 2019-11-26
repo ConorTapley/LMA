@@ -4544,7 +4544,7 @@ GameObject:
   - component: {fileID: 319600756}
   - component: {fileID: 319600755}
   m_Layer: 5
-  m_Name: Pic6
+  m_Name: Pic1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4614,7 +4614,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 803293310}
-        m_MethodName: OnClick6
+        m_MethodName: OnClick1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4646,7 +4646,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: a11f31c52dc838d4c916e7e151572833, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f23c9955e740fdf4ca453d93abbd3f48, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5050,7 +5050,7 @@ GameObject:
   - component: {fileID: 376266289}
   - component: {fileID: 376266288}
   m_Layer: 5
-  m_Name: Pic5
+  m_Name: Pic4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5120,7 +5120,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 803293310}
-        m_MethodName: OnClick5
+        m_MethodName: OnClick4
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7560,12 +7560,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc10c421a577d2246b333478d6ad3d4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  step1: {fileID: 1534859649}
-  step2: {fileID: 1462915839}
-  step3: {fileID: 1339670517}
-  step4: {fileID: 812975439}
-  step5: {fileID: 376266288}
-  step6: {fileID: 319600755}
+  step1: {fileID: 1462915839}
+  step2: {fileID: 1339670517}
+  step3: {fileID: 812975439}
+  step4: {fileID: 376266288}
+  step5: {fileID: 319600755}
+  step6: {fileID: 1534859649}
   step7: {fileID: 881131586}
   step8: {fileID: 547797044}
   bottomButton1: {fileID: 1729150492}
@@ -7577,12 +7577,12 @@ MonoBehaviour:
   bottomButton7: {fileID: 953591988}
   bottomButton8: {fileID: 519143877}
   Blank: {fileID: 21300000, guid: 07c34f7c1b04474439db939920b20d0a, type: 3}
-  win1: {fileID: 21300000, guid: 6e5853e6f104ed34a966affb803576cd, type: 3}
-  win2: {fileID: 21300000, guid: 46ac42be3966822489383320084c5320, type: 3}
-  win3: {fileID: 21300000, guid: fcbb0babeffcb344ea570b36169e8eb6, type: 3}
-  win4: {fileID: 21300000, guid: 3d7303059ee0c2f47bd087acfd372c1d, type: 3}
-  win5: {fileID: 21300000, guid: f438f7602d768c64dbc601cbdc6ab9ae, type: 3}
-  win6: {fileID: 21300000, guid: 99ab314d3e5ee4d479aca9118a964627, type: 3}
+  win1: {fileID: 21300000, guid: 46ac42be3966822489383320084c5320, type: 3}
+  win2: {fileID: 21300000, guid: fcbb0babeffcb344ea570b36169e8eb6, type: 3}
+  win3: {fileID: 21300000, guid: 3d7303059ee0c2f47bd087acfd372c1d, type: 3}
+  win4: {fileID: 21300000, guid: f438f7602d768c64dbc601cbdc6ab9ae, type: 3}
+  win5: {fileID: 21300000, guid: 99ab314d3e5ee4d479aca9118a964627, type: 3}
+  win6: {fileID: 21300000, guid: 6e5853e6f104ed34a966affb803576cd, type: 3}
   win7: {fileID: 21300000, guid: 214696cd06bf57044a1f6dcd4d6b502f, type: 3}
   win8: {fileID: 21300000, guid: 5a1af890d67f8794982682ca0324735f, type: 3}
 --- !u!1 &812975437
@@ -7598,7 +7598,7 @@ GameObject:
   - component: {fileID: 812975440}
   - component: {fileID: 812975439}
   m_Layer: 5
-  m_Name: Pic4
+  m_Name: Pic3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7668,7 +7668,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 803293310}
-        m_MethodName: OnClick4
+        m_MethodName: OnClick3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12204,7 +12204,7 @@ GameObject:
   - component: {fileID: 1339670518}
   - component: {fileID: 1339670517}
   m_Layer: 5
-  m_Name: Pic3
+  m_Name: Pic2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12274,7 +12274,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 803293310}
-        m_MethodName: OnClick3
+        m_MethodName: OnClick2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12498,7 +12498,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0a2f5df0232a5134bbe22f5cbc4f6188, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -13011,7 +13011,7 @@ GameObject:
   - component: {fileID: 1462915840}
   - component: {fileID: 1462915839}
   m_Layer: 5
-  m_Name: Pic2
+  m_Name: Pic5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13025,7 +13025,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1462915837}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.000017510312}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 0.14138657, y: 1.1789361, z: 0.3701875}
   m_Children:
   - {fileID: 1354548079}
@@ -13081,7 +13081,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 803293310}
-        m_MethodName: OnClick2
+        m_MethodName: OnClick5
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13113,7 +13113,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f23c9955e740fdf4ca453d93abbd3f48, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a11f31c52dc838d4c916e7e151572833, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13792,7 +13792,7 @@ GameObject:
   - component: {fileID: 1534859650}
   - component: {fileID: 1534859649}
   m_Layer: 5
-  m_Name: Pic1
+  m_Name: Pic6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13862,7 +13862,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 803293310}
-        m_MethodName: OnClick1
+        m_MethodName: OnClick6
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
