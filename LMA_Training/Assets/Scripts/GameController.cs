@@ -26,7 +26,7 @@ public class GameController : MonoBehaviour
 
     /////Audio/////
     [SerializeField] AudioSource robotNurseAudioSource;
-    [SerializeField] AudioClip startAudio, lubeCaseAudio, lubeLMAAudio, PickLMAAudio, RemoveCaseAudio, clipboard, checkLMAForLubeInside, tiltHead;
+    [SerializeField] AudioClip startAudio, lubeCaseAudio, lubeLMAAudio, PickLMAAudio, RemoveCaseAudio, clipboardAudio, checkLMAForLubeInsideAudio, tiltHeadAudio, grabLMAAudio, IncertLMAAudio;
     private bool hasPlayedIntro = false, hasPlayedClipboard = false, hasPlayedLubeLMA = false, hasPlayedCheckLMA = false, hasPlayedHeadTilt = false;
 
     void Start()
@@ -54,7 +54,7 @@ public class GameController : MonoBehaviour
     {
         if (hasPlayedIntro && !hasPlayedClipboard && !robotNurseAudioSource.isPlaying)
         {
-            robotNurseAudioSource.PlayOneShot(clipboard);
+            robotNurseAudioSource.PlayOneShot(clipboardAudio);
             hasPlayedClipboard = true;
         }
 
@@ -77,13 +77,13 @@ public class GameController : MonoBehaviour
 
         if(!hasPlayedCheckLMA && hasPlayedLubeLMA && !robotNurseAudioSource.isPlaying)
         {
-            robotNurseAudioSource.PlayOneShot(checkLMAForLubeInside); //<------- play the audio to check if there is lube inside the lma
+            robotNurseAudioSource.PlayOneShot(checkLMAForLubeInsideAudio); //<------- play the audio to check if there is lube inside the lma
             hasPlayedCheckLMA = true;
         }
 
         if(!hasPlayedHeadTilt && hasPlayedCheckLMA && !robotNurseAudioSource.isPlaying)
         {
-            robotNurseAudioSource.PlayOneShot(tiltHead); //<-------------------- play the audio to tilt the patients head
+            robotNurseAudioSource.PlayOneShot(tiltHeadAudio); //<-------------------- play the audio to tilt the patients head
             hasPlayedHeadTilt = true;
             tiltHeadButton.SetActive(true);
         }
