@@ -13369,6 +13369,7 @@ MonoBehaviour:
   lubeLMAAudio: {fileID: 8300000, guid: f7f6adfbc075c2a44988d513d6351dec, type: 3}
   PickLMAAudio: {fileID: 8300000, guid: b10f54b8bec1870408debd3e7b76ddf3, type: 3}
   RemoveCaseAudio: {fileID: 8300000, guid: 005732f1c9597214b9d1802f94ad8eed, type: 3}
+  clipboard: {fileID: 8300000, guid: 5db5c6c2751acad42b6dfc5f09871e2c, type: 3}
 --- !u!4 &2001750222
 Transform:
   m_ObjectHideFlags: 0

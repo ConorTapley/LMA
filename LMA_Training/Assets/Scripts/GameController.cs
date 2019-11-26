@@ -26,8 +26,8 @@ public class GameController : MonoBehaviour
 
     /////Audio/////
     [SerializeField] AudioSource robotNurseAudioSource;
-    [SerializeField] AudioClip startAudio, lubeCaseAudio, lubeLMAAudio, PickLMAAudio, RemoveCaseAudio;
-
+    [SerializeField] AudioClip startAudio, lubeCaseAudio, lubeLMAAudio, PickLMAAudio, RemoveCaseAudio, clipboard;
+    private bool hasPlayedIntro = false, hasPlayedClipboard = false;
 
     void Start()
     {
@@ -41,7 +41,12 @@ public class GameController : MonoBehaviour
         nextStepArrow4.SetActive(false);
         stepObj5.SetActive(false);
 
-        robotNurseAudioSource.PlayOneShot(startAudio);
+        if(!hasPlayedIntro)
+        {
+            robotNurseAudioSource.PlayOneShot(startAudio);
+            hasPlayedIntro = true;
+        }
+        
     }
 
     void Update()
@@ -55,6 +60,12 @@ public class GameController : MonoBehaviour
 
         if (nextStepbool4 && !robotNurseAudioSource.isPlaying)
             nextStepArrow4.SetActive(true); //<---activating the arrow button from lubricating the case to lubricating the LMA
+
+        if(hasPlayedIntro && !hasPlayedClipboard &&!robotNurseAudioSource.isPlaying)
+        {
+            robotNurseAudioSource.PlayOneShot(clipboard);
+            hasPlayedClipboard = true;
+        }
 
         //wait till the robot finishes talking at the start of the scene before you can use the tv
         if (!robotNurseAudioSource.isPlaying)
