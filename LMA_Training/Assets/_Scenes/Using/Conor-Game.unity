@@ -1315,7 +1315,7 @@ PrefabInstance:
     - target: {fileID: 3072444597845552708, guid: c4004a7457374314d99d84a74c729711,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.058
+      value: 6.74
       objectReference: {fileID: 0}
     - target: {fileID: 3072444597845552708, guid: c4004a7457374314d99d84a74c729711,
         type: 3}
@@ -1325,27 +1325,27 @@ PrefabInstance:
     - target: {fileID: 3072444597845552708, guid: c4004a7457374314d99d84a74c729711,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.03
+      value: -4.61
       objectReference: {fileID: 0}
     - target: {fileID: 3072444597845552708, guid: c4004a7457374314d99d84a74c729711,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.67648673
+      value: -0.6712405
       objectReference: {fileID: 0}
     - target: {fileID: 3072444597845552708, guid: c4004a7457374314d99d84a74c729711,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.20582934
+      value: -0.22234249
       objectReference: {fileID: 0}
     - target: {fileID: 3072444597845552708, guid: c4004a7457374314d99d84a74c729711,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.20582937
+      value: -0.22234249
       objectReference: {fileID: 0}
     - target: {fileID: 3072444597845552708, guid: c4004a7457374314d99d84a74c729711,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.67648673
+      value: 0.6712405
       objectReference: {fileID: 0}
     - target: {fileID: 3072444597845552708, guid: c4004a7457374314d99d84a74c729711,
         type: 3}
@@ -1360,7 +1360,7 @@ PrefabInstance:
     - target: {fileID: 3072444597845552708, guid: c4004a7457374314d99d84a74c729711,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -70.5
       objectReference: {fileID: 0}
     - target: {fileID: 3072444597845552708, guid: c4004a7457374314d99d84a74c729711,
         type: 3}
@@ -4108,7 +4108,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 419407560}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 4.963, y: 2.53, z: -2.411}
+  m_LocalPosition: {x: 3.888, y: 2.53, z: -2.411}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 205798059}
@@ -10155,13 +10155,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.19
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 45
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -13842,6 +13842,8 @@ MonoBehaviour:
   tiltHeadAudio: {fileID: 8300000, guid: 49ad3a74571ef494ca58849bf3f08445, type: 3}
   grabLMAAudio: {fileID: 8300000, guid: b2b948a51c9c8fd479fa70d2194ff242, type: 3}
   IncertLMAAudio: {fileID: 8300000, guid: 261b2e7c20a3cd6499decccce51374c7, type: 3}
+  SscopeAudio: {fileID: 8300000, guid: 2f90b78c767a39245b6aad13a75cd32d, type: 3}
+  incertLMAScript: {fileID: 1266773280}
 --- !u!4 &2001750222
 Transform:
   m_ObjectHideFlags: 0

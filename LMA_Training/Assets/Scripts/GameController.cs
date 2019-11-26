@@ -26,12 +26,11 @@ public class GameController : MonoBehaviour
 
     /////Audio/////
     [SerializeField] AudioSource robotNurseAudioSource;
-    [SerializeField] AudioClip startAudio, lubeCaseAudio, lubeLMAAudio, PickLMAAudio, RemoveCaseAudio, clipboardAudio, checkLMAForLubeInsideAudio, tiltHeadAudio, grabLMAAudio, IncertLMAAudio;
-    private bool hasPlayedIntro = false, hasPlayedClipboard = false, hasPlayedLubeLMA = false, hasPlayedCheckLMA = false, hasPlayedHeadTilt = false, hasPlayedGrabLMA = false, hasPlayedIncertLMA = false;
+    [SerializeField] AudioClip startAudio, lubeCaseAudio, lubeLMAAudio, PickLMAAudio, RemoveCaseAudio, clipboardAudio, checkLMAForLubeInsideAudio, tiltHeadAudio, grabLMAAudio, IncertLMAAudio, SscopeAudio;
+    private bool hasPlayedIntro = false, hasPlayedClipboard = false, hasPlayedLubeLMA = false, hasPlayedCheckLMA = false, hasPlayedHeadTilt = false, hasPlayedGrabLMA = false, hasPlayedIncertLMA = false, hasPlayedSscope = false;
     private bool playGrabLMA = false;
 
     public IncertLMA incertLMAScript;
-    [SerializeField] private bool LMAInMouth = false;
 
     void Start()
     {
@@ -57,7 +56,6 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
-        LMAInMouth = incertLMAScript.inMouth;
 
         if (hasPlayedIntro && !hasPlayedClipboard && !robotNurseAudioSource.isPlaying)
         {
@@ -105,6 +103,12 @@ public class GameController : MonoBehaviour
         {
             robotNurseAudioSource.PlayOneShot(IncertLMAAudio);
             hasPlayedIncertLMA = true;
+        }
+
+        if(incertLMAScript.inMouth && !hasPlayedSscope && !robotNurseAudioSource.isPlaying && hasPlayedIncertLMA) //<------check if the LMA is in the patients mouth
+        {
+            robotNurseAudioSource.PlayOneShot(SscopeAudio);
+            hasPlayedSscope = true;
         }
         
     }
