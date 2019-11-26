@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
     //each part of the game can only be played if the bool for it is true
-    [SerializeField] private GameObject startTVScreen, stepObj1, stepObj2, stepObj3, stepObj4, stepObj5, stepObj6, stepObj7, stepObj8;
+    [SerializeField] private GameObject startTVScreen, stepObj1, stepObj2, stepObj3, stepObj4, stepObj5, stepObj6, stepObj7, stepObj8, LMABinding;
 
     //Select the LMA
     [SerializeField] private GameObject selectLMA1, selectLMA2, selectLMA3, selectLMA5;
@@ -22,18 +22,21 @@ public class GameController : MonoBehaviour
 
     ///////Action Buttons////////
     [SerializeField] private GameObject tiltHeadButton;
-    [SerializeField] private GameObject tvStartButton, pickLMAButton, removeCaseButton, lubeCaseButton, lubeLMAButton;
+    [SerializeField] private GameObject tvStartButton, pickLMAButton, removeCaseButton, lubeCaseButton, lubeLMAButton, tieLMAButton;
 
     /////Audio/////
     [SerializeField] AudioSource robotNurseAudioSource;
-    [SerializeField] AudioClip startAudio, lubeCaseAudio, lubeLMAAudio, PickLMAAudio, RemoveCaseAudio, clipboardAudio, checkLMAForLubeInsideAudio, tiltHeadAudio, grabLMAAudio, IncertLMAAudio, SscopeAudio;
-    private bool hasPlayedIntro = false, hasPlayedClipboard = false, hasPlayedLubeLMA = false, hasPlayedCheckLMA = false, hasPlayedHeadTilt = false, hasPlayedGrabLMA = false, hasPlayedIncertLMA = false, hasPlayedSscope = false;
+    [SerializeField] AudioClip startAudio, lubeCaseAudio, lubeLMAAudio, PickLMAAudio, RemoveCaseAudio, clipboardAudio, checkLMAForLubeInsideAudio, tiltHeadAudio, grabLMAAudio, IncertLMAAudio, SscopeAudio, completedTutorialAudio;
+    private bool hasPlayedIntro = false, hasPlayedClipboard = false, hasPlayedLubeLMA = false, hasPlayedCheckLMA = false, hasPlayedHeadTilt = false, hasPlayedGrabLMA = false, hasPlayedIncertLMA = false, hasPlayedSscope = false, tieLMAButtonPressed = false;
     private bool playGrabLMA = false;
 
     public IncertLMA incertLMAScript;
 
     void Start()
     {
+        LMABinding.SetActive(false);
+        tieLMAButton.SetActive(false);
+
         tvStartButton.SetActive(false);
 
         stepObj2.SetActive(false);
@@ -105,10 +108,17 @@ public class GameController : MonoBehaviour
             hasPlayedIncertLMA = true;
         }
 
+        //check if the lma is in the mouth
         if(incertLMAScript.inMouth && !hasPlayedSscope && !robotNurseAudioSource.isPlaying && hasPlayedIncertLMA) //<------check if the LMA is in the patients mouth
         {
             robotNurseAudioSource.PlayOneShot(SscopeAudio);
             hasPlayedSscope = true;
+        }
+
+        //tie LMA
+        if(hasPlayedSscope && !robotNurseAudioSource.isPlaying && !tieLMAButtonPressed)
+        {
+            tieLMAButton.SetActive(true); //<----------------------activate the tie LMA button
         }
         
     }
@@ -259,7 +269,10 @@ public class GameController : MonoBehaviour
     //8
     public void TieLMA()
     {
-
+        LMABinding.SetActive(true);
+        tieLMAButton.SetActive(false);
+        tieLMAButtonPressed = true;
+        robotNurseAudioSource.PlayOneShot(completedTutorialAudio);
     }
 
 
