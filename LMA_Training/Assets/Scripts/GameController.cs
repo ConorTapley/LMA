@@ -26,8 +26,8 @@ public class GameController : MonoBehaviour
 
     /////Audio/////
     [SerializeField] AudioSource robotNurseAudioSource;
-    [SerializeField] AudioClip startAudio, lubeCaseAudio, lubeLMAAudio, PickLMAAudio, RemoveCaseAudio, clipboard, checkLMAForLubeInside;
-    private bool hasPlayedIntro = false, hasPlayedClipboard = false, hasPlayedLubeLMA = false, hasPlayedCheckLMA = false;
+    [SerializeField] AudioClip startAudio, lubeCaseAudio, lubeLMAAudio, PickLMAAudio, RemoveCaseAudio, clipboard, checkLMAForLubeInside, tiltHead;
+    private bool hasPlayedIntro = false, hasPlayedClipboard = false, hasPlayedLubeLMA = false, hasPlayedCheckLMA = false, hasPlayedHeadTilt = false;
 
     void Start()
     {
@@ -40,6 +40,7 @@ public class GameController : MonoBehaviour
         stepObj4.SetActive(false);
         nextStepArrow4.SetActive(false);
         stepObj5.SetActive(false);
+        tiltHeadButton.SetActive(false);
 
         if(!hasPlayedIntro)
         {
@@ -51,8 +52,20 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
+        if (hasPlayedIntro && !hasPlayedClipboard && !robotNurseAudioSource.isPlaying)
+        {
+            robotNurseAudioSource.PlayOneShot(clipboard);
+            hasPlayedClipboard = true;
+        }
+
+        //wait till the robot finishes talking at the start of the scene before you can use the tv
+        if (!robotNurseAudioSource.isPlaying)
+            tvStartButton.SetActive(true);
+
+
+
         //When you pick the LMA let the audio be finished playing before the arrow appears to let you move to the next step
-        if(nextStepbool2 && !robotNurseAudioSource.isPlaying)
+        if (nextStepbool2 && !robotNurseAudioSource.isPlaying)
             nextStepArrow2.SetActive(true); //<---activating the arrow button from picking the LMA to removing the LMA from its case
 
         if (nextStepbool3 && !robotNurseAudioSource.isPlaying)
@@ -68,16 +81,13 @@ public class GameController : MonoBehaviour
             hasPlayedCheckLMA = true;
         }
 
-
-        if(hasPlayedIntro && !hasPlayedClipboard &&!robotNurseAudioSource.isPlaying)
+        if(!hasPlayedHeadTilt && hasPlayedCheckLMA && !robotNurseAudioSource.isPlaying)
         {
-            robotNurseAudioSource.PlayOneShot(clipboard);
-            hasPlayedClipboard = true;
+            robotNurseAudioSource.PlayOneShot(tiltHead); //<-------------------- play the audio to tilt the patients head
+            hasPlayedHeadTilt = true;
+            tiltHeadButton.SetActive(true);
         }
-
-        //wait till the robot finishes talking at the start of the scene before you can use the tv
-        if (!robotNurseAudioSource.isPlaying)
-            tvStartButton.SetActive(true);
+        
     }
 
 

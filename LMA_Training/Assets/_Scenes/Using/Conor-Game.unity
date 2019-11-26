@@ -13464,6 +13464,7 @@ MonoBehaviour:
   clipboard: {fileID: 8300000, guid: 5db5c6c2751acad42b6dfc5f09871e2c, type: 3}
   checkLMAForLubeInside: {fileID: 8300000, guid: ef427b06f7086df47acef31a8a1366e8,
     type: 3}
+  tiltHead: {fileID: 8300000, guid: 49ad3a74571ef494ca58849bf3f08445, type: 3}
 --- !u!4 &2001750222
 Transform:
   m_ObjectHideFlags: 0
