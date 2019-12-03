@@ -20,6 +20,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private Animator LubeLMAAnimator;
     [SerializeField] private Animator LubeCaseAnimator;
     [SerializeField] private Animator removeCaseAnimator;
+    [SerializeField] private Animator ghostLMAAnimator;
 
     ///////Action Buttons////////
     [SerializeField] private GameObject tiltHeadButton;
@@ -32,6 +33,7 @@ public class GameController : MonoBehaviour
     private bool playGrabLMA = false;
 
     public IncertLMA incertLMAScript;
+    private bool patientHeadTilted = false;
 
     void Start()
     {
@@ -61,7 +63,8 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
-        IncertLMA();
+        
+        
 
 
         if (hasPlayedIntro && !hasPlayedClipboard && !robotNurseAudioSource.isPlaying)
@@ -100,7 +103,19 @@ public class GameController : MonoBehaviour
             tiltHeadButton.SetActive(true);
         }
 
-        if(playGrabLMA && !hasPlayedGrabLMA && !robotNurseAudioSource.isPlaying)
+        //7
+        if (LMARespawn.LMAOnTable == true && patientHeadTilted && !incertLMAScript.inMouth)
+        {
+            stepObj7.SetActive(true);
+            ghostLMAAnimator.Play("GhostLMA");
+            //IncertLMA();
+        }
+        else if(LMARespawn.LMAOnTable == false)
+        {
+            stepObj7.SetActive(false);
+        }
+
+        if (playGrabLMA && !hasPlayedGrabLMA && !robotNurseAudioSource.isPlaying)
         {
             robotNurseAudioSource.PlayOneShot(grabLMAAudio); //<----------------------pick up the LMA audio
             hasPlayedGrabLMA = true;
@@ -244,6 +259,7 @@ public class GameController : MonoBehaviour
         tiltHeadButton.SetActive(false);
 
         playGrabLMA = true;
+        patientHeadTilted = true;
     }
 
     //////////////////////NEXT STEP/////////////////////
@@ -259,10 +275,13 @@ public class GameController : MonoBehaviour
     public void IncertLMA()
     {
         //if the lma is on the table play ghost animation
-        if(LMARespawn.LMAOnTable == false)
+        if (LMARespawn.LMAOnTable == false)
             stepObj7.SetActive(false);
         else
+        {
             stepObj7.SetActive(true); //if the lma is not on the table dont play ghost animation
+            ghostLMAAnimator.Play("GhostLMA");
+        }
     }
     
     
