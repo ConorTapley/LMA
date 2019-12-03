@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
+    public LMARespawn LMARespawn;
     //each part of the game can only be played if the bool for it is true
     [SerializeField] private GameObject startTVScreen, stepObj1, stepObj2, stepObj3, stepObj4, stepObj5, stepObj6, stepObj7, stepObj8, LMABinding;
 
@@ -19,6 +20,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private Animator LubeLMAAnimator;
     [SerializeField] private Animator LubeCaseAnimator;
     [SerializeField] private Animator removeCaseAnimator;
+    [SerializeField] private Animator ghostLMAAnimator;
 
     ///////Action Buttons////////
     [SerializeField] private GameObject tiltHeadButton;
@@ -31,6 +33,7 @@ public class GameController : MonoBehaviour
     private bool playGrabLMA = false;
 
     public IncertLMA incertLMAScript;
+    private bool patientHeadTilted = false;
 
     void Start()
     {
@@ -39,6 +42,7 @@ public class GameController : MonoBehaviour
 
         tvStartButton.SetActive(false);
 
+        stepObj7.SetActive(false);
         stepObj2.SetActive(false);
         nextStepArrow2.SetActive(false);
         stepObj3.SetActive(false);
@@ -59,6 +63,9 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
+        
+        
+
 
         if (hasPlayedIntro && !hasPlayedClipboard && !robotNurseAudioSource.isPlaying)
         {
@@ -96,7 +103,19 @@ public class GameController : MonoBehaviour
             tiltHeadButton.SetActive(true);
         }
 
-        if(playGrabLMA && !hasPlayedGrabLMA && !robotNurseAudioSource.isPlaying)
+        //7
+        if (LMARespawn.LMAOnTable == true && patientHeadTilted && !incertLMAScript.inMouth)
+        {
+            stepObj7.SetActive(true);
+            ghostLMAAnimator.Play("GhostLMA");
+            //IncertLMA();
+        }
+        else if(LMARespawn.LMAOnTable == false)
+        {
+            stepObj7.SetActive(false);
+        }
+
+        if (playGrabLMA && !hasPlayedGrabLMA && !robotNurseAudioSource.isPlaying)
         {
             robotNurseAudioSource.PlayOneShot(grabLMAAudio); //<----------------------pick up the LMA audio
             hasPlayedGrabLMA = true;
@@ -240,6 +259,7 @@ public class GameController : MonoBehaviour
         tiltHeadButton.SetActive(false);
 
         playGrabLMA = true;
+        patientHeadTilted = true;
     }
 
     //////////////////////NEXT STEP/////////////////////
@@ -254,13 +274,21 @@ public class GameController : MonoBehaviour
     //7
     public void IncertLMA()
     {
-
+        //if the lma is on the table play ghost animation
+        if (LMARespawn.LMAOnTable == false)
+            stepObj7.SetActive(false);
+        else
+        {
+            stepObj7.SetActive(true); //if the lma is not on the table dont play ghost animation
+            ghostLMAAnimator.Play("GhostLMA");
+        }
     }
-
+    
+    
     //////////////////////NEXT STEP/////////////////////
     public void NextStep7()
     {
-
+        
     }
 
 
@@ -276,8 +304,7 @@ public class GameController : MonoBehaviour
     }
 
 
-
-
+    
 
     /*
      * Step 1 = Pick up Clipboard
