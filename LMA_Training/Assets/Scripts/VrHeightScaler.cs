@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class VrHeightScaler : MonoBehaviour
 {
-    [SerializeField] private float defaultHeight = 1f;
+    [SerializeField] private float defaultHeight = 1.1f;
+    [SerializeField] private float maxHeight = 1.5f;
+    [SerializeField] private float minHeight = 1f;
 
     private void Start()
     {
@@ -18,11 +20,17 @@ public class VrHeightScaler : MonoBehaviour
 
     public void IncreseHeightButton()
     {
-        defaultHeight += .1f;
+        if(defaultHeight < maxHeight)
+        {
+            defaultHeight += .1f;
+        }
     }
 
     public void DecreseHeightButton()
     {
-        defaultHeight -= .1f;
+        if(defaultHeight > minHeight)
+        {
+            defaultHeight -= .1f;
+        }
     }
 }
