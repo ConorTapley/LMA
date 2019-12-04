@@ -7,7 +7,7 @@ public class GameController : MonoBehaviour
 {
     public LMARespawn LMARespawn;
     //each part of the game can only be played if the bool for it is true
-    [SerializeField] private GameObject startTVScreen, stepObj1, stepObj2, stepObj3, stepObj4, stepObj5, stepObj6, stepObj7, stepObj8, LMABinding;
+    [SerializeField] private GameObject startTVScreen, stepObj1, stepObj2, stepObj3, stepObj4, stepObj5, stepObj6, stepObj7, stepObj8, LMABinding, changeHeightScreen, changeHeightContinueButton;
 
     //Select the LMA
     [SerializeField] private GameObject selectLMA1, selectLMA2, selectLMA3, selectLMA5;
@@ -37,6 +37,8 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
+        changeHeightScreen.SetActive(true);
+
         LMABinding.SetActive(false);
         tieLMAButton.SetActive(false);
 
@@ -63,10 +65,6 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
-        
-        
-
-
         if (hasPlayedIntro && !hasPlayedClipboard && !robotNurseAudioSource.isPlaying)
         {
             robotNurseAudioSource.PlayOneShot(clipboardAudio);
@@ -94,6 +92,9 @@ public class GameController : MonoBehaviour
         {
             robotNurseAudioSource.PlayOneShot(checkLMAForLubeInsideAudio); //<------- play the audio to check if there is lube inside the lma
             hasPlayedCheckLMA = true;
+            stepObj5.SetActive(false); //make the last tv animation stop
+            changeHeightScreen.SetActive(true); //make the adjust height show up
+            changeHeightContinueButton.SetActive(false);
         }
 
         if(!hasPlayedHeadTilt && hasPlayedCheckLMA && !robotNurseAudioSource.isPlaying)
@@ -149,6 +150,7 @@ public class GameController : MonoBehaviour
         startTVScreen.SetActive(false);
         tvStartButton.SetActive(false);
         stepObj2.SetActive(true);
+        changeHeightScreen.SetActive(false);
 
         robotNurseAudioSource.PlayOneShot(PickLMAAudio);
     }

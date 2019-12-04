@@ -60,8 +60,8 @@ public class OVRGrabber : MonoBehaviour
     protected float m_prevFlex;
 
 	protected OVRGrabbable m_grabbedObj = null;
-    private OVRGrabbable grabbedObj;
-    public GameObject goGrabbed;
+    //private OVRGrabbable grabbedObj;
+    //public GameObject goGrabbed;
     //[SerializeField] GameObject LMA;//   <------------------------------------------------------------------------------------------------------------------------------
 
     protected Vector3 m_grabbedObjectPosOff;
@@ -69,13 +69,13 @@ public class OVRGrabber : MonoBehaviour
 	protected Dictionary<OVRGrabbable, int> m_grabCandidates = new Dictionary<OVRGrabbable, int>();
 	protected bool operatingWithoutOVRCameraRig = true;
 
-
+    /*
     private void Update()
     {
         grabbedObj = m_grabbedObj;
         goGrabbed = grabbedObj.gameObject;
     }
-
+    */
     /// <summary>
     /// The currently grabbed object.
     /// </summary>
