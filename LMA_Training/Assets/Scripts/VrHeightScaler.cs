@@ -10,4 +10,19 @@ public class VrHeightScaler : MonoBehaviour
     {
         this.transform.localScale = new Vector3(this.transform.localScale.x, defaultHeight, this.transform.localScale.z);
     }
+
+    private void Update()
+    {
+        this.transform.localScale = new Vector3(this.transform.localScale.x, defaultHeight, this.transform.localScale.z);
+    }
+
+    public void IncreseHeightButton()
+    {
+        defaultHeight += .1f;
+    }
+
+    public void DecreseHeightButton()
+    {
+        defaultHeight -= .1f;
+    }
 }
