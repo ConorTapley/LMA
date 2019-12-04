@@ -7,6 +7,7 @@ public class VrHeightScaler : MonoBehaviour
     [SerializeField] private float defaultHeight = 1.1f;
     [SerializeField] private float maxHeight = 1.5f;
     [SerializeField] private float minHeight = 1f;
+    public GameObject heightCanvas;
 
     private void Start()
     {
@@ -32,5 +33,10 @@ public class VrHeightScaler : MonoBehaviour
         {
             defaultHeight -= .1f;
         }
+    }
+
+    public void ContinueButton()
+    {
+        heightCanvas.SetActive(false);
     }
 }
