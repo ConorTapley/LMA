@@ -40,11 +40,11 @@ public class ClipBoardScript : MonoBehaviour
 
     public void OnClick()
     {
-        var tstPg1 = Instantiate(testPg1);
+        /*var tstPg1 = Instantiate(testPg1);
         tstPg1.transform.position = detailsPg.transform.position;
-        tstPg1.transform.SetParent(clipBoard.transform);
+        tstPg1.transform.SetParent(clipBoard.transform);*/
 
-        GameObject.Destroy(detailsPg);
+        //GameObject.Destroy(detailsPg);
     }
 
 

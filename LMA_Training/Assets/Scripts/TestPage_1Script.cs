@@ -15,7 +15,7 @@ public class TestPage_1Script : MonoBehaviour
     void Start()
     {
         testPg1 = this.gameObject;
-        clipBoard = GameObject.FindGameObjectWithTag("ClipBoard");
+        //clipBoard = GameObject.FindGameObjectWithTag("ClipBoard");
 
         cBManager = GameObject.FindGameObjectWithTag("ClipBoardManager");
         cBScript = cBManager.GetComponent<ClipBoardScript>();
@@ -29,9 +29,9 @@ public class TestPage_1Script : MonoBehaviour
 
     public void OnClick_2()
     {
-        var tstPg2 = Instantiate(testPg2);
+        /*var tstPg2 = Instantiate(testPg2);
         tstPg2.transform.SetParent(clipBoard.transform);
-        tstPg2.transform.position = testPg1.transform.position;
+        tstPg2.transform.position = testPg1.transform.position;*/
 
         
 
