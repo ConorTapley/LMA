@@ -14348,7 +14348,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8666092411516589746}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 3d01d0bd7337424418e1c9b6dfefbfb9, type: 3}
   m_Controller: {fileID: 9100000, guid: 1a202cbddc7afe44e8e2a8e09e9d502a, type: 2}
   m_CullingMode: 1
@@ -15060,14 +15060,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 771654661415204927}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.69, y: 2.0802, z: -7.35}
-  m_LocalScale: {x: 1.0683, y: 1.0683, z: 1.0683}
+  m_LocalRotation: {x: -0, y: -0.51570237, z: -0, w: 0.85676783}
+  m_LocalPosition: {x: 7.69, y: 2.0802, z: -6.899}
+  m_LocalScale: {x: 1.3599459, y: 1.3599459, z: 1.3599459}
   m_Children:
   - {fileID: 7944226137926305268}
   m_Father: {fileID: 0}
   m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -62.089005, z: 0}
 --- !u!1 &6330297708070559568
 GameObject:
   m_ObjectHideFlags: 0
