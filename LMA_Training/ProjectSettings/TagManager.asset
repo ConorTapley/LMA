@@ -7,6 +7,18 @@ TagManager:
   - TextBoxStep2
   - Sound
   - Mouth
+  - Ground
+  - ClipBoardManager
+  - Score
+  - Question6
+  - Question4
+  - Question2
+  - Question1
+  - Question3
+  - Question5
+  - DetailsPage
+  - LMA
+  - LMASpawn
   layers:
   - Default
   - TransparentFX

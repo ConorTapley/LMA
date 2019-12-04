@@ -5,8 +5,9 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
+    public LMARespawn LMARespawn;
     //each part of the game can only be played if the bool for it is true
-    [SerializeField] private GameObject startTVScreen, stepObj1, stepObj2, stepObj3, stepObj4, stepObj5, stepObj6, stepObj7, stepObj8;
+    [SerializeField] private GameObject startTVScreen, stepObj1, stepObj2, stepObj3, stepObj4, stepObj5, stepObj6, stepObj7, stepObj8, LMABinding;
 
     //Select the LMA
     [SerializeField] private GameObject selectLMA1, selectLMA2, selectLMA3, selectLMA5;
@@ -19,20 +20,29 @@ public class GameController : MonoBehaviour
     [SerializeField] private Animator LubeLMAAnimator;
     [SerializeField] private Animator LubeCaseAnimator;
     [SerializeField] private Animator removeCaseAnimator;
+    [SerializeField] private Animator ghostLMAAnimator;
 
     ///////Action Buttons////////
     [SerializeField] private GameObject tiltHeadButton;
-    [SerializeField] private GameObject tvStartButton, pickLMAButton, removeCaseButton, lubeCaseButton, lubeLMAButton;
+    [SerializeField] private GameObject tvStartButton, pickLMAButton, removeCaseButton, lubeCaseButton, lubeLMAButton, tieLMAButton;
 
     /////Audio/////
     [SerializeField] AudioSource robotNurseAudioSource;
-    [SerializeField] AudioClip startAudio, lubeCaseAudio, lubeLMAAudio, PickLMAAudio, RemoveCaseAudio;
+    [SerializeField] AudioClip startAudio, lubeCaseAudio, lubeLMAAudio, PickLMAAudio, RemoveCaseAudio, clipboardAudio, checkLMAForLubeInsideAudio, tiltHeadAudio, grabLMAAudio, IncertLMAAudio, SscopeAudio, completedTutorialAudio;
+    private bool hasPlayedIntro = false, hasPlayedClipboard = false, hasPlayedLubeLMA = false, hasPlayedCheckLMA = false, hasPlayedHeadTilt = false, hasPlayedGrabLMA = false, hasPlayedIncertLMA = false, hasPlayedSscope = false, tieLMAButtonPressed = false;
+    private bool playGrabLMA = false;
 
+    public IncertLMA incertLMAScript;
+    private bool patientHeadTilted = false;
 
     void Start()
     {
+        LMABinding.SetActive(false);
+        tieLMAButton.SetActive(false);
+
         tvStartButton.SetActive(false);
 
+        stepObj7.SetActive(false);
         stepObj2.SetActive(false);
         nextStepArrow2.SetActive(false);
         stepObj3.SetActive(false);
@@ -40,14 +50,37 @@ public class GameController : MonoBehaviour
         stepObj4.SetActive(false);
         nextStepArrow4.SetActive(false);
         stepObj5.SetActive(false);
+        tiltHeadButton.SetActive(false);
 
-        robotNurseAudioSource.PlayOneShot(startAudio);
+        if(!hasPlayedIntro)
+        {
+            robotNurseAudioSource.PlayOneShot(startAudio);
+            hasPlayedIntro = true;
+        }
+
+        
     }
 
     void Update()
     {
+        
+        
+
+
+        if (hasPlayedIntro && !hasPlayedClipboard && !robotNurseAudioSource.isPlaying)
+        {
+            robotNurseAudioSource.PlayOneShot(clipboardAudio);
+            hasPlayedClipboard = true;
+        }
+
+        //wait till the robot finishes talking at the start of the scene before you can use the tv
+        if (!robotNurseAudioSource.isPlaying)
+            tvStartButton.SetActive(true);
+
+
+
         //When you pick the LMA let the audio be finished playing before the arrow appears to let you move to the next step
-        if(nextStepbool2 && !robotNurseAudioSource.isPlaying)
+        if (nextStepbool2 && !robotNurseAudioSource.isPlaying)
             nextStepArrow2.SetActive(true); //<---activating the arrow button from picking the LMA to removing the LMA from its case
 
         if (nextStepbool3 && !robotNurseAudioSource.isPlaying)
@@ -56,9 +89,57 @@ public class GameController : MonoBehaviour
         if (nextStepbool4 && !robotNurseAudioSource.isPlaying)
             nextStepArrow4.SetActive(true); //<---activating the arrow button from lubricating the case to lubricating the LMA
 
-        //wait till the robot finishes talking at the start of the scene before you can use the tv
-        if (!robotNurseAudioSource.isPlaying)
-            tvStartButton.SetActive(true);
+
+        if(!hasPlayedCheckLMA && hasPlayedLubeLMA && !robotNurseAudioSource.isPlaying)
+        {
+            robotNurseAudioSource.PlayOneShot(checkLMAForLubeInsideAudio); //<------- play the audio to check if there is lube inside the lma
+            hasPlayedCheckLMA = true;
+        }
+
+        if(!hasPlayedHeadTilt && hasPlayedCheckLMA && !robotNurseAudioSource.isPlaying)
+        {
+            robotNurseAudioSource.PlayOneShot(tiltHeadAudio); //<-------------------- play the audio to tilt the patients head
+            hasPlayedHeadTilt = true;
+            tiltHeadButton.SetActive(true);
+        }
+
+        //7
+        if (LMARespawn.LMAOnTable == true && patientHeadTilted && !incertLMAScript.inMouth)
+        {
+            stepObj7.SetActive(true);
+            ghostLMAAnimator.Play("GhostLMA");
+            //IncertLMA();
+        }
+        else if(LMARespawn.LMAOnTable == false)
+        {
+            stepObj7.SetActive(false);
+        }
+
+        if (playGrabLMA && !hasPlayedGrabLMA && !robotNurseAudioSource.isPlaying)
+        {
+            robotNurseAudioSource.PlayOneShot(grabLMAAudio); //<----------------------pick up the LMA audio
+            hasPlayedGrabLMA = true;
+        }
+
+        if(!hasPlayedIncertLMA && hasPlayedGrabLMA && !robotNurseAudioSource.isPlaying)
+        {
+            robotNurseAudioSource.PlayOneShot(IncertLMAAudio);
+            hasPlayedIncertLMA = true;
+        }
+
+        //check if the lma is in the mouth
+        if(incertLMAScript.inMouth && !hasPlayedSscope && !robotNurseAudioSource.isPlaying && hasPlayedIncertLMA) //<------check if the LMA is in the patients mouth
+        {
+            robotNurseAudioSource.PlayOneShot(SscopeAudio);
+            hasPlayedSscope = true;
+        }
+
+        //tie LMA
+        if(hasPlayedSscope && !robotNurseAudioSource.isPlaying && !tieLMAButtonPressed)
+        {
+            tieLMAButton.SetActive(true); //<----------------------activate the tie LMA button
+        }
+        
     }
 
 
@@ -149,6 +230,7 @@ public class GameController : MonoBehaviour
         stepObj5.SetActive(true);
 
         robotNurseAudioSource.PlayOneShot(lubeLMAAudio);
+        hasPlayedLubeLMA = true;
     }
 
 
@@ -175,6 +257,9 @@ public class GameController : MonoBehaviour
     {
         patientAnimator.Play("Patient Head Tilt");
         tiltHeadButton.SetActive(false);
+
+        playGrabLMA = true;
+        patientHeadTilted = true;
     }
 
     //////////////////////NEXT STEP/////////////////////
@@ -189,13 +274,21 @@ public class GameController : MonoBehaviour
     //7
     public void IncertLMA()
     {
-
+        //if the lma is on the table play ghost animation
+        if (LMARespawn.LMAOnTable == false)
+            stepObj7.SetActive(false);
+        else
+        {
+            stepObj7.SetActive(true); //if the lma is not on the table dont play ghost animation
+            ghostLMAAnimator.Play("GhostLMA");
+        }
     }
-
+    
+    
     //////////////////////NEXT STEP/////////////////////
     public void NextStep7()
     {
-
+        
     }
 
 
@@ -204,12 +297,14 @@ public class GameController : MonoBehaviour
     //8
     public void TieLMA()
     {
-
+        LMABinding.SetActive(true);
+        tieLMAButton.SetActive(false);
+        tieLMAButtonPressed = true;
+        robotNurseAudioSource.PlayOneShot(completedTutorialAudio);
     }
 
 
-
-
+    
 
     /*
      * Step 1 = Pick up Clipboard

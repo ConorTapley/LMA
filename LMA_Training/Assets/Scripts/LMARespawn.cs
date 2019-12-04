@@ -5,9 +5,10 @@ using UnityEngine;
 public class LMARespawn : MonoBehaviour
 {
     private GameObject LMA;
-    private Vector3 LMASpawnPos;
+    public Vector3 LMASpawnPos;
     private Vector3 LMASpawnRot;
     private bool onGround = false;
+    public bool LMAOnTable = false;
 
     void Start()
     {
@@ -25,7 +26,9 @@ public class LMARespawn : MonoBehaviour
             LMA.transform.eulerAngles = LMASpawnRot;
         }
     }
+    
 
+    
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Ground"))
@@ -33,10 +36,16 @@ public class LMARespawn : MonoBehaviour
             //Debug.Log("ON Ground!!");
             onGround = true;
         }
+        if (other.CompareTag("LMASpawn"))
+        {
+            LMAOnTable = true;
+        }
+
     }
 
     private void OnTriggerExit(Collider other)
     {
         onGround = false;
+        LMAOnTable = false;
     }
 }
