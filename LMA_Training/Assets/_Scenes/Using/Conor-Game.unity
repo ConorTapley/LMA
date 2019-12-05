@@ -2190,7 +2190,7 @@ MonoBehaviour:
   CurrentDistance: 0
   EnableFadeout: 0
   EnableCollision: 0
-  DynamicHeight: 1
+  DynamicHeight: 0
   MaxFade: 1
   FadeMinDistance: 0.25
   FadeMaxDistance: 0.35
@@ -4732,7 +4732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultHeight: 1
   maxHeight: 1.3
-  minHeight: 1
+  minHeight: 0.8
   heightCanvas: {fileID: 293276215}
 --- !u!1 &432600754
 GameObject:
