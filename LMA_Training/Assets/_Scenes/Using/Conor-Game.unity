@@ -16029,6 +16029,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c2f99217c50191418c3208424d23660, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minWeight: 50
+  maxWeight: 90
   weightRng: {fileID: 623243327}
   testPg1: {fileID: 827216241714861877, guid: 7b3811955416f1c449bb494bad9a64b7, type: 3}
   finishPg: {fileID: 3688446199017750808, guid: 636a34c3834e4074a94fec9442c49249,
@@ -16617,19 +16619,19 @@ MonoBehaviour:
   lubeLMAButton: {fileID: 911966364}
   tieLMAButton: {fileID: 736225577}
   robotNurseAudioSource: {fileID: 372218376}
-  startAudio: {fileID: 8300000, guid: a4fafe2504dead14c9d0bde39ee5642f, type: 3}
-  lubeCaseAudio: {fileID: 8300000, guid: 897ed445fad9b3c40996fe33585c00fb, type: 3}
-  lubeLMAAudio: {fileID: 8300000, guid: ce3e0cc2c94c0af479d8ed7e8d5279a5, type: 3}
-  PickLMAAudio: {fileID: 8300000, guid: 03eaf07a1478b514fabb122fbde7fbe0, type: 3}
-  RemoveCaseAudio: {fileID: 8300000, guid: f83baa2af07ce6744ae934f8c9ba77b8, type: 3}
-  clipboardAudio: {fileID: 8300000, guid: 5db5c6c2751acad42b6dfc5f09871e2c, type: 3}
-  checkLMAForLubeInsideAudio: {fileID: 8300000, guid: ef427b06f7086df47acef31a8a1366e8,
+  startAudio: {fileID: 8300000, guid: 8e22c62bf47715045a08f5658202cea0, type: 3}
+  lubeCaseAudio: {fileID: 8300000, guid: c5cb3edf21253844f8ed1e528c82e6fc, type: 3}
+  lubeLMAAudio: {fileID: 8300000, guid: 2d75eea7f54249548a7d4ba5f7143a25, type: 3}
+  PickLMAAudio: {fileID: 8300000, guid: b95a1b1467e774f46a005cb36b6389ae, type: 3}
+  RemoveCaseAudio: {fileID: 8300000, guid: 3db53ce0185f9f04cae7c92b0b30d528, type: 3}
+  clipboardAudio: {fileID: 8300000, guid: 0716bcda2376d5d4fb29e348a87fea59, type: 3}
+  checkLMAForLubeInsideAudio: {fileID: 8300000, guid: 1acca379eff9ca84aa43933550b38e0f,
     type: 3}
-  tiltHeadAudio: {fileID: 8300000, guid: 49ad3a74571ef494ca58849bf3f08445, type: 3}
-  grabLMAAudio: {fileID: 8300000, guid: b2b948a51c9c8fd479fa70d2194ff242, type: 3}
-  IncertLMAAudio: {fileID: 8300000, guid: 261b2e7c20a3cd6499decccce51374c7, type: 3}
-  SscopeAudio: {fileID: 8300000, guid: 2f90b78c767a39245b6aad13a75cd32d, type: 3}
-  completedTutorialAudio: {fileID: 8300000, guid: d415676b3bfac51489c2402d0dc5bd9f,
+  tiltHeadAudio: {fileID: 8300000, guid: cd689208be3230741a3e9f16e907f598, type: 3}
+  grabLMAAudio: {fileID: 8300000, guid: 4c973b57ec30bf0408eaae6cc1ed73a4, type: 3}
+  IncertLMAAudio: {fileID: 8300000, guid: e40111b96b3fc7442ae22ff6f60363cc, type: 3}
+  SscopeAudio: {fileID: 8300000, guid: 2613b6b5efe1187499172dcb4eb2f45f, type: 3}
+  completedTutorialAudio: {fileID: 8300000, guid: ad688618c40470f4cb03fda07c65f04d,
     type: 3}
   incertLMAScript: {fileID: 1086535766}
 --- !u!4 &2001750222
