@@ -32,7 +32,7 @@ public class IncertLMA : MonoBehaviour
             inMouth = true;
         }
     }
-
+    /*
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Sound"))
@@ -42,10 +42,11 @@ public class IncertLMA : MonoBehaviour
             VibrationManager.singleton.TriggerVibration(dingSound, OVRInput.Controller.RTouch);
         }
     }
-
+    */
     void OnTriggerExit(Collider other)
     {
         //OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.Active);
         inMouth = false;
     }
+    
 }

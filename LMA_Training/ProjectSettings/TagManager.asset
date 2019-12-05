@@ -19,6 +19,7 @@ TagManager:
   - DetailsPage
   - LMA
   - LMASpawn
+  - LMABottom
   layers:
   - Default
   - TransparentFX
