@@ -29,7 +29,7 @@ public class LMARespawn : MonoBehaviour
     
 
     
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if(other.CompareTag("Ground"))
         {
