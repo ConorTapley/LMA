@@ -48,6 +48,8 @@ public class OVRGrabber : MonoBehaviour
     // Should be OVRInput.Controller.LTouch or OVRInput.Controller.RTouch.
     [SerializeField]
     protected OVRInput.Controller m_controller;
+    //public OVRInput.Button grabButton = OVRInput.Button.PrimaryIndexTrigger; //<---------------new button input
+    public OVRInput.Axis1D grabButton = OVRInput.Axis1D.PrimaryIndexTrigger;
 
     [SerializeField]
     protected Transform m_parentTransform;
@@ -160,7 +162,7 @@ public class OVRGrabber : MonoBehaviour
 
 		float prevFlex = m_prevFlex;
 		// Update values from inputs
-		m_prevFlex = OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, m_controller);
+		m_prevFlex = OVRInput.Get(grabButton, m_controller); //<------- HERE for controller input
 
 		CheckForGrabOrRelease(prevFlex);
     }
