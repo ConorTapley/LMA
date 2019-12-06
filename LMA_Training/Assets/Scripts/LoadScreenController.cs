@@ -24,7 +24,7 @@ public class LoadScreenController : MonoBehaviour
 
         if(m_slider.value >= 0.9f)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
         StartCoroutine(FillSlider());
     }
