@@ -15348,6 +15348,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c2f99217c50191418c3208424d23660, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minWeight: 50
+  maxWeight: 90
   weightRng: {fileID: 623243327}
   testPg1: {fileID: 827216241714861877, guid: 7b3811955416f1c449bb494bad9a64b7, type: 3}
   finishPg: {fileID: 3688446199017750808, guid: 636a34c3834e4074a94fec9442c49249,
