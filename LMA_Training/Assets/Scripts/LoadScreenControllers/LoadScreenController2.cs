@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class LoadScreenController : MonoBehaviour
+public class LoadScreenController2 : MonoBehaviour
 {
 
     public GameObject LoadBar;
@@ -12,6 +12,8 @@ public class LoadScreenController : MonoBehaviour
 
     public float LoadBarFakeTimer = 0.5f;
     public float fillQuantity = 0.1f;
+
+    public int loadSceneIndex;
 
     public void Start()
     {
@@ -24,7 +26,7 @@ public class LoadScreenController : MonoBehaviour
 
         if(m_slider.value >= 0.9f)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(loadSceneIndex);
         }
         StartCoroutine(FillSlider());
     }
