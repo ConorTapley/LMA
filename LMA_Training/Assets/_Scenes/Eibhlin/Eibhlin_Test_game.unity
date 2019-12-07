@@ -2961,6 +2961,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestMan(noTexture)
       objectReference: {fileID: 0}
+    - target: {fileID: 8668424481281686881, guid: 70fa7b16c55ccfb47a1251dcf57a2ca7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5627027813259202418, guid: 70fa7b16c55ccfb47a1251dcf57a2ca7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6258,20 +6263,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: BindingAroundFace
       objectReference: {fileID: 0}
-    - target: {fileID: 9214729923358917510, guid: 1cb6d38c3ee268e46bd8420c81cb9e91,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5312582709798662549, guid: 1cb6d38c3ee268e46bd8420c81cb9e91,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.8896794
+      value: 2.8984
       objectReference: {fileID: 0}
     - target: {fileID: 5312582709798662549, guid: 1cb6d38c3ee268e46bd8420c81cb9e91,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.29599953
+      value: 0.249
       objectReference: {fileID: 0}
     - target: {fileID: 5312582709798662549, guid: 1cb6d38c3ee268e46bd8420c81cb9e91,
         type: 3}
@@ -6281,22 +6281,22 @@ PrefabInstance:
     - target: {fileID: 5312582709798662549, guid: 1cb6d38c3ee268e46bd8420c81cb9e91,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.15384819
+      value: 0.12664598
       objectReference: {fileID: 0}
     - target: {fileID: 5312582709798662549, guid: 1cb6d38c3ee268e46bd8420c81cb9e91,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000005268356
+      value: -0.0000000054110996
       objectReference: {fileID: 0}
     - target: {fileID: 5312582709798662549, guid: 1cb6d38c3ee268e46bd8420c81cb9e91,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000005268356
+      value: -0.000000005121642
       objectReference: {fileID: 0}
     - target: {fileID: 5312582709798662549, guid: 1cb6d38c3ee268e46bd8420c81cb9e91,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.98809457
+      value: 0.991948
       objectReference: {fileID: 0}
     - target: {fileID: 5312582709798662549, guid: 1cb6d38c3ee268e46bd8420c81cb9e91,
         type: 3}
@@ -6306,7 +6306,7 @@ PrefabInstance:
     - target: {fileID: 5312582709798662549, guid: 1cb6d38c3ee268e46bd8420c81cb9e91,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 17.7
+      value: 14.552001
       objectReference: {fileID: 0}
     - target: {fileID: 5312582709798662549, guid: 1cb6d38c3ee268e46bd8420c81cb9e91,
         type: 3}
@@ -6317,21 +6317,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5312582709798662549, guid: 1cb6d38c3ee268e46bd8420c81cb9e91,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.064556874
-      objectReference: {fileID: 0}
-    - target: {fileID: 5312582709798662549, guid: 1cb6d38c3ee268e46bd8420c81cb9e91,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.06455496
-      objectReference: {fileID: 0}
-    - target: {fileID: 5312582709798662549, guid: 1cb6d38c3ee268e46bd8420c81cb9e91,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.031932704
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cb6d38c3ee268e46bd8420c81cb9e91, type: 3}
@@ -11365,7 +11350,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24704
+  m_Name: pb_Mesh28524
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11585,7 +11570,7 @@ MonoBehaviour:
     m_FontStyle: 3
     m_BestFit: 0
     m_MinSize: 2
-    m_MaxSize: 49
+    m_MaxSize: 166
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
