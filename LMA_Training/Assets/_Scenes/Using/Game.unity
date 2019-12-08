@@ -1702,6 +1702,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 72644819}
   m_CullTransparentMesh: 0
+--- !u!1 &81962883 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 614884470590167695, guid: 22335841f6878b244b2f1416573b0b16,
+    type: 3}
+  m_PrefabInstance: {fileID: 1871905941}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &93218168 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8274693054306370837, guid: bbf599ebae466d640b97f4c47d379b48,
@@ -2163,6 +2169,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &168770121 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 184369648205328922, guid: 3b10211d82a091949af58fff642b9921,
+    type: 3}
+  m_PrefabInstance: {fileID: 1683460572}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &181575499
 GameObject:
   m_ObjectHideFlags: 0
@@ -5633,7 +5645,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &511761825
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5696,6 +5708,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 511761824}
   m_CullTransparentMesh: 0
+--- !u!1 &511933041 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8124730396810221095, guid: 28195f1d9f972364eb4fff9454fbbe52,
+    type: 3}
+  m_PrefabInstance: {fileID: 773238127}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &524444782
 GameObject:
   m_ObjectHideFlags: 0
@@ -7347,6 +7365,12 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &789982683 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6013028274926286421, guid: 009049fd61ff1ef4096ce2deaa25fdea,
+    type: 3}
+  m_PrefabInstance: {fileID: 569670850}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &790120460
 GameObject:
   m_ObjectHideFlags: 0
@@ -10249,7 +10273,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1068523752
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10421,6 +10445,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 85866eacb4dbf4e4eb0bc1211ed6f4b2,
     type: 3}
   m_PrefabInstance: {fileID: 1078564557}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1081823240 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6060195256056451068, guid: 75a9930b509d16b48abc3a97b5725999,
+    type: 3}
+  m_PrefabInstance: {fileID: 333199405}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1086535763 stripped
 GameObject:
@@ -13405,6 +13435,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6d01dc66ce24564d9227d231d370497, type: 3}
+--- !u!1 &1266559661 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3058962755557555131, guid: 88c422b57487b0346a68225a16c47b3c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1823984221}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1266773277 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 9169b69521f57a846a0c1068527e9686,
@@ -17925,6 +17961,12 @@ Transform:
   m_Father: {fileID: 281130565}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1883340390 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3173601065912444492, guid: ae36857eef1bf094090ef61bdbfe0d43,
+    type: 3}
+  m_PrefabInstance: {fileID: 141951112}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1947019879
 GameObject:
   m_ObjectHideFlags: 0
@@ -18168,7 +18210,7 @@ MonoBehaviour:
   stepObj8: {fileID: 1350365210}
   LMABinding: {fileID: 768508062}
   changeHeightScreen: {fileID: 293276215}
-  changeHeightContinueButton: {fileID: 813040738}
+  changeHeightContinueButton: {fileID: 81962883}
   selectLMA1: {fileID: 880629872}
   selectLMA2: {fileID: 1588079833}
   selectLMA3: {fileID: 1521128023}
@@ -18181,13 +18223,13 @@ MonoBehaviour:
   LubeCaseAnimator: {fileID: 1778749563}
   removeCaseAnimator: {fileID: 1708499135}
   ghostLMAAnimator: {fileID: 1400712030}
-  tiltHeadButton: {fileID: 908968919}
-  tvStartButton: {fileID: 12236094}
-  pickLMAButton: {fileID: 524444782}
-  removeCaseButton: {fileID: 72644819}
-  lubeCaseButton: {fileID: 1062037758}
-  lubeLMAButton: {fileID: 911966364}
-  tieLMAButton: {fileID: 736225577}
+  tiltHeadButton: {fileID: 511933041}
+  tvStartButton: {fileID: 789982683}
+  pickLMAButton: {fileID: 1081823240}
+  removeCaseButton: {fileID: 2109209478}
+  lubeCaseButton: {fileID: 1266559661}
+  lubeLMAButton: {fileID: 168770121}
+  tieLMAButton: {fileID: 1883340390}
   robotNurseAudioSource: {fileID: 372218376}
   startAudio: {fileID: 8300000, guid: 8e22c62bf47715045a08f5658202cea0, type: 3}
   lubeCaseAudio: {fileID: 8300000, guid: c5cb3edf21253844f8ed1e528c82e6fc, type: 3}
@@ -19187,6 +19229,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2099757543}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2109209478 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9130130321195473079, guid: 957e8c3041c86e04a90a8f7a9766b795,
+    type: 3}
+  m_PrefabInstance: {fileID: 307665411}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2136232107
 PrefabInstance:
   m_ObjectHideFlags: 0
