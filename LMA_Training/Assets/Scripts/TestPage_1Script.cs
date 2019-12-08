@@ -6,19 +6,19 @@ public class TestPage_1Script : MonoBehaviour
 {
     private GameObject testPg1;
 
-    public GameObject testPg2;
-    private GameObject clipBoard;
+    //public GameObject testPg2;
+    //private GameObject clipBoard;
 
-    private GameObject cBManager;
-    private ClipBoardScript cBScript;
+    private GameObject qManager;
+    private QuestionManagerScript qMScript;
 
     void Start()
     {
         testPg1 = this.gameObject;
         //clipBoard = GameObject.FindGameObjectWithTag("ClipBoard");
 
-        cBManager = GameObject.FindGameObjectWithTag("ClipBoardManager");
-        cBScript = cBManager.GetComponent<ClipBoardScript>();
+        qManager = GameObject.FindGameObjectWithTag("QuestionManager");
+        qMScript = qManager.GetComponent<QuestionManagerScript>();
     }
 
     // Update is called once per frame
@@ -40,11 +40,11 @@ public class TestPage_1Script : MonoBehaviour
 
     public void OnCorrectClick()
     {
-        cBScript.OnCorrectClick();
+        qMScript.OnCorrectClick();
     }
 
     public void OnWrongClick()
     {
-        cBScript.OnWrongClick();
+        qMScript.OnWrongClick();
     }
 }

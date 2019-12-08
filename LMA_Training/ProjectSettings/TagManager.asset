@@ -19,6 +19,15 @@ TagManager:
   - DetailsPage
   - LMA
   - LMASpawn
+  - TextBoxSpawn
+  - ChinButtonSpawn
+  - QuestionManager
+  - Question1Pg2
+  - Question2pg2
+  - Question3pg2
+  - Question4pg2
+  - Question5pg2
+  - Question6pg2
   layers:
   - Default
   - TransparentFX

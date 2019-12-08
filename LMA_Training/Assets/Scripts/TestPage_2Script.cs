@@ -5,28 +5,28 @@ using UnityEngine.UI;
 
 public class TestPage_2Script : MonoBehaviour
 {
-    public GameObject finishPg;
-    private GameObject clipBoard;
+    //public GameObject finishPg;
+    //private GameObject clipBoard;
     private GameObject testPg2;
-    private GameObject cBManager;
 
     private Text scoreTxt;
-    private ClipBoardScript cBScript;
+    private GameObject qManager;
+    private QuestionManagerScript qMScript;
     private int tScore;
 
     void Start()
     {
         testPg2 = this.gameObject;
         //clipBoard = GameObject.FindGameObjectWithTag("ClipBoard");
-        cBManager = GameObject.FindGameObjectWithTag("ClipBoardManager");
-        cBScript = cBManager.GetComponent<ClipBoardScript>();
+        qManager = GameObject.FindGameObjectWithTag("QuestionManager");
+        qMScript = qManager.GetComponent<QuestionManagerScript>();
         
     }
 
     
     void Update()
     {
-        tScore = cBScript.testScore;
+        tScore = qMScript.testScore;
     }
 
     public void OnClick_3()
@@ -43,11 +43,11 @@ public class TestPage_2Script : MonoBehaviour
 
     public void OnCorrectClick()
     {
-        cBScript.OnCorrectClick();
+        qMScript.OnCorrectClick();
     }
 
     public void OnWrongClick()
     {
-        cBScript.OnWrongClick();
+        qMScript.OnWrongClick();
     }
 }
