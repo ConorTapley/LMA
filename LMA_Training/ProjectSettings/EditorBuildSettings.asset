@@ -5,13 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/_Scenes/Using/Playroom.unity
     guid: 611f2f24f3aa6fa41b117a6eb73e9e1a
-  - enabled: 0
+  - enabled: 1
     path: Assets/_Scenes/Using/Conor-Game.unity
     guid: 8b677b83c065dc948b4c1ad363d4fd00
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/Eibhlin/Eibhlin-Game.unity
     guid: 387ba0ffae8ccb64c9740ba2fe7886b7
+  - enabled: 1
+    path: Assets/_Scenes/Eibhlin/Eibhlins_Playroom.unity
+    guid: 52409d64150cde745a326b770765a684
   m_configObjects: {}
