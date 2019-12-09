@@ -153,6 +153,7 @@ public class GameController : MonoBehaviour
         if(tieLMAButtonPressed)
         {
             restartSceneScreen.SetActive(true);
+            changeHeightScreen.SetActive(false);
         }
     }
 
