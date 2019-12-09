@@ -6,6 +6,8 @@ using UnityEngine.EventSystems;
 
 public class ClipBoardScript : MonoBehaviour
 {
+    public int minWeight = 50, maxWeight = 90;
+
     public Text weightRng;
 
     private int weightNum;
@@ -13,7 +15,7 @@ public class ClipBoardScript : MonoBehaviour
 
     void Start()
     {
-        weightNum = Random.Range(30, 100);
+        weightNum = Random.Range(minWeight, maxWeight);
         weightRng.text = "Weight: "+ weightNum + "kg";
         
     }

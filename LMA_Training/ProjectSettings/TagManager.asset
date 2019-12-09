@@ -3,31 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - TextBoxStep2
-  - Sound
-  - Mouth
-  - Ground
-  - ClipBoardManager
-  - Score
-  - Question6
-  - Question4
-  - Question2
-  - Question1
-  - Question3
-  - Question5
-  - DetailsPage
-  - LMA
-  - LMASpawn
-  - TextBoxSpawn
-  - ChinButtonSpawn
-  - QuestionManager
-  - Question1Pg2
-  - Question2pg2
-  - Question3pg2
-  - Question4pg2
-  - Question5pg2
-  - Question6pg2
+  tags: []
   layers:
   - Default
   - TransparentFX
