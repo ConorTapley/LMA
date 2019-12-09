@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class GameController : MonoBehaviour
     public bool lmaInMouth = false;
     public LMARespawn LMARespawn;
     //each part of the game can only be played if the bool for it is true
-    [SerializeField] private GameObject startTVScreen, stepObj1, stepObj2, stepObj3, stepObj4, stepObj5, stepObj6, stepObj7, stepObj8, LMABinding, changeHeightScreen, changeHeightContinueButton, stethoscope;
+    [SerializeField] private GameObject startTVScreen, restartSceneScreen, stepObj1, stepObj2, stepObj3, stepObj4, stepObj5, stepObj6, stepObj7, stepObj8, LMABinding, changeHeightScreen, changeHeightContinueButton, stethoscope;
 
     //Select the LMA
     [SerializeField] private GameObject selectLMA1, selectLMA2, selectLMA3, selectLMA5;
@@ -40,6 +41,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         changeHeightScreen.SetActive(true);
+        restartSceneScreen.SetActive(false);
         stethoscope.SetActive(false);
         LMABinding.SetActive(false);
         tieLMAButton.SetActive(false);
@@ -147,6 +149,11 @@ public class GameController : MonoBehaviour
             stethoscope.SetActive(false);
         }
         
+        //game finished
+        if(tieLMAButtonPressed)
+        {
+            restartSceneScreen.SetActive(true);
+        }
     }
 
 
@@ -312,7 +319,10 @@ public class GameController : MonoBehaviour
     }
 
 
-    
+    public void RestartScene()
+    {
+        SceneManager.LoadScene("Game");
+    }
 
     /*
      * Step 1 = Pick up Clipboard
