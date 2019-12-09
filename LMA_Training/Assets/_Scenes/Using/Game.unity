@@ -8775,7 +8775,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11400010, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: RotationRatchet
-      value: 45
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 11400010, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: RotationEitherThumbstick
@@ -17651,10 +17651,6 @@ MonoBehaviour:
   minWeight: 50
   maxWeight: 90
   weightRng: {fileID: 623243327}
-  testPg1: {fileID: 827216241714861877, guid: 7b3811955416f1c449bb494bad9a64b7, type: 3}
-  finishPg: {fileID: 3688446199017750808, guid: 636a34c3834e4074a94fec9442c49249,
-    type: 3}
-  testScore: 0
 --- !u!4 &1795007571
 Transform:
   m_ObjectHideFlags: 0
