@@ -7,6 +7,7 @@ public class IncertLMA : MonoBehaviour
     private OVRGrabbable ovrGrabbable;
     public OVRInput.Button grabButton;
     public AudioClip dingSound;
+    public bool aroundMouth = false;
     public bool inMouth = false;
     private Rigidbody rb;
 
@@ -18,7 +19,7 @@ public class IncertLMA : MonoBehaviour
     
     void Update()
     {
-        if (inMouth)
+        if (aroundMouth)
             rb.constraints = RigidbodyConstraints.FreezeAll;
         else
             rb.constraints = RigidbodyConstraints.None;
@@ -28,7 +29,12 @@ public class IncertLMA : MonoBehaviour
     {
         if(other.CompareTag("Mouth"))
         {
-            Debug.Log("IN MOUTH");
+            //Debug.Log("IN MOUTH");
+            aroundMouth = true;
+        }
+        //if the lma hits the sound trigger it is in the patients mouth
+        if(other.CompareTag("Sound"))
+        {
             inMouth = true;
         }
     }
@@ -46,6 +52,7 @@ public class IncertLMA : MonoBehaviour
     void OnTriggerExit(Collider other)
     {
         //OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.Active);
+        aroundMouth = false;
         inMouth = false;
     }
     

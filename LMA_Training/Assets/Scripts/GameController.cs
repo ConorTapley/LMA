@@ -5,9 +5,11 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
+    public IncertLMA lmaIncert;
+    public bool lmaInMouth = false;
     public LMARespawn LMARespawn;
     //each part of the game can only be played if the bool for it is true
-    [SerializeField] private GameObject startTVScreen, stepObj1, stepObj2, stepObj3, stepObj4, stepObj5, stepObj6, stepObj7, stepObj8, LMABinding, changeHeightScreen, changeHeightContinueButton;
+    [SerializeField] private GameObject startTVScreen, stepObj1, stepObj2, stepObj3, stepObj4, stepObj5, stepObj6, stepObj7, stepObj8, LMABinding, changeHeightScreen, changeHeightContinueButton, stethoscope;
 
     //Select the LMA
     [SerializeField] private GameObject selectLMA1, selectLMA2, selectLMA3, selectLMA5;
@@ -38,7 +40,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         changeHeightScreen.SetActive(true);
-
+        stethoscope.SetActive(false);
         LMABinding.SetActive(false);
         tieLMAButton.SetActive(false);
 
@@ -65,6 +67,8 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
+        lmaInMouth = lmaIncert.inMouth;
+
         if (hasPlayedIntro && !hasPlayedClipboard && !robotNurseAudioSource.isPlaying)
         {
             robotNurseAudioSource.PlayOneShot(clipboardAudio);
@@ -105,7 +109,7 @@ public class GameController : MonoBehaviour
         }
 
         //7
-        if (LMARespawn.LMAOnTable == true && patientHeadTilted && !incertLMAScript.inMouth)
+        if (LMARespawn.LMAOnTable == true && patientHeadTilted && !incertLMAScript.aroundMouth)
         {
             stepObj7.SetActive(true);
             ghostLMAAnimator.Play("GhostLMA");
@@ -129,16 +133,18 @@ public class GameController : MonoBehaviour
         }
 
         //check if the lma is in the mouth
-        if(incertLMAScript.inMouth && !hasPlayedSscope && !robotNurseAudioSource.isPlaying && hasPlayedIncertLMA) //<------check if the LMA is in the patients mouth
+        if(incertLMAScript.aroundMouth && !hasPlayedSscope && !robotNurseAudioSource.isPlaying && hasPlayedIncertLMA && lmaInMouth) //<------check if the LMA is in the patients mouth
         {
             robotNurseAudioSource.PlayOneShot(SscopeAudio);
             hasPlayedSscope = true;
+            stethoscope.SetActive(true);
         }
 
         //tie LMA
         if(hasPlayedSscope && !robotNurseAudioSource.isPlaying && !tieLMAButtonPressed)
         {
             tieLMAButton.SetActive(true); //<----------------------activate the tie LMA button
+            stethoscope.SetActive(false);
         }
         
     }
